@@ -37,7 +37,7 @@ public class ElevatorAutoL2 extends Command {
     System.out.println(Timer.getTimestamp() - initTime);
       // Before 2 seconds
       while (Timer.getTimestamp() - initTime < 2){
-        mElevator.elevate(.5d);
+        mElevator.elevateDown(.5d);
       }
       // After 2 seconds and before 2.5 seconds
       /*while (Timer.getTimestamp() - initTime >= 2 && (Timer.getTimestamp() - initTime <= 2.5)){
