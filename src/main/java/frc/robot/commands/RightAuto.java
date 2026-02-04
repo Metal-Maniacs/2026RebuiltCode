@@ -98,8 +98,8 @@ public class RightAuto extends Command {
       return false;
     }
   }
-
-  private double feetToSpeed(double feet) {
+//changed "private double" to "public double" and the yellow line went away???
+  public double feetToSpeed(double feet) {
     return feet / 24.93;
   }
 

@@ -85,8 +85,8 @@ public class ElevatorAutoL2 extends Command {
       return false;
     }
   }
-
-  private double feetToSpeed(double feet) {
+//changed from "private double" to "public double" and it worked???
+  public double feetToSpeed(double feet) {
     // Conversion
     return feet / 24.93;
   }

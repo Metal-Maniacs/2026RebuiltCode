@@ -36,6 +36,23 @@ import com.revrobotics.spark.SparkLowLevel.MotorType;
  * project.
  */
 public class Robot extends TimedRobot {
+  
+ /** new code    
+  * private static final int deviceID=0;
+  private SparkMax m_motor;
+  private SparkClosedLoopController m_ClosedLoopController;
+  public double kP, kI, kD, Kiz, kMaxOutput, MinOutput;
+
+  /**
+   * A RelativeEncoder object is constructed using the GetEncoder() method on an
+   * existing SparkMax object. The assumed encoder type is the hall effect, 
+   * or a sensor type and counts per revolution cam be passed in to specify
+   * a different kind of sensor. Here, it's a quadrature encoder with 4096 CPR.
+   */
+  //private RelativeEncoder m_encoder; 
+ 
+
+    //Original code below
 
   CommandXboxController controller;
   UsbCamera driveCam;
@@ -57,7 +74,7 @@ public class Robot extends TimedRobot {
 
   /** Called once at the beginning of the robot program. */
   public Robot() {
-
+ //private RelativeEncoder m_encoder;
     //driveCam = CameraServer.startAutomaticCapture(0);
     //clawCam = CameraServer.startAutomaticCapture(0);
     //elevatorCam = CameraServer.startAutomaticCapture(2);
@@ -74,6 +91,30 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
+
+
+
+
+    /*new code
+    // initialize SPARK MAX with CAN ID
+    m_motor = new SparkMax(deviceID, MotorType.kBrushed);
+    m_encoder = m_motor.getEncoder(SparkRelativeEncoder.Type.kQuadrature, 4096);
+    
+    m_motor.restoreFactoryDefaults();*/
+
+    /**
+     * In order to use PID functionality for a controller, a SparkPIDController object
+     * is constructed by calling the getPIDController() method on an existing
+     * CANSparkMax object
+     */
+   // m_ClosedLoopController = m_motor.getClosedLoopController();
+
+    
+    
+    
+    
+    
+    //ogcode
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();

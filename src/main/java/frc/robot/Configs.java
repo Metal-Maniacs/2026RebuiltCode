@@ -3,6 +3,7 @@ package frc.robot;
 import com.revrobotics.spark.config.SparkMaxConfig;
 import com.revrobotics.spark.FeedbackSensor;
 import com.revrobotics.spark.config.SparkBaseConfig.IdleMode;
+//import com.revrobotics.config.BaseConfig;
 
 import frc.robot.Constants.ModuleConstants;
 
@@ -25,12 +26,16 @@ public final class Configs {
                     .positionConversionFactor(drivingFactor) // meters
                     .velocityConversionFactor(drivingFactor / 60.0); // meters per second
             drivingConfig.closedLoop
+            //add ".feedForward" after "closedLoop" to fix "velocityFF" but causes ".feedbackSensor"
+            //to not work
                     .feedbackSensor(FeedbackSensor.kPrimaryEncoder)
                     // These are example gains you may need to them for your own robot!
                     .pid(0.04, 0, 0)
-                    .velocityFF(drivingVelocityFeedForward)
-                    .outputRange(-1, 1);
-
+                    .outputRange(-1, 1)
+                    .feedForward.kV(drivingVelocityFeedForward);
+            //change "velocityFF" to "feedForward" due deprication and then .kV
+            
+ 
             turningConfig
                     .idleMode(IdleMode.kBrake)
                     .smartCurrentLimit(20);
