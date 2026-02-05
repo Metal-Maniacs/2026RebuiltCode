@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import frc.robot.Constants.DriveConstants;
 
+@SuppressWarnings("unused")
 public class Climb extends SubsystemBase {
 
   private final SparkMax m_climbMotor;

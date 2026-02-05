@@ -11,6 +11,7 @@ import edu.wpi.first.math.controller.ElevatorFeedforward;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.subsystems.Elevator;
 
+@SuppressWarnings("unused")
 public class ElevatorAutoL2 extends Command {
 
   /*

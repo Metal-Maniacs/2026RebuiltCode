@@ -13,6 +13,7 @@ import org.opencv.core.Mat;
 import edu.wpi.first.wpilibj.Timer;
 import frc.robot.subsystems.DriveSubsystem;
 
+@SuppressWarnings("unused")
 /* You should consider using the more terse Command factories API instead https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#defining-commands */
 public class RightAuto extends Command {
   /** Creates a new AutoDriveForward. */

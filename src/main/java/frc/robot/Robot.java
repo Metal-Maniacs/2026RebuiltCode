@@ -35,6 +35,7 @@ import com.revrobotics.spark.SparkLowLevel.MotorType;
  * the package after creating this project, you must also update the build.gradle file in the
  * project.
  */
+@SuppressWarnings("unused")
 public class Robot extends TimedRobot {
   
  /** new code    
