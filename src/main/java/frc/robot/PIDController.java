@@ -1,4 +1,4 @@
-package frc.robot.subsystems;
+package frc.robot;
 
 public class PIDController {
 
@@ -17,7 +17,7 @@ public PIDController() {
     this(0, 0, 0, true, true);
 }
 
-public PIDController(PIDValues   values) {
+public PIDController(PIDValues values) {
 this(values.kP, values.kI, values.kD, true, true);
 }
 
@@ -95,15 +95,11 @@ public PIDController(double kP, double kI, double kD, boolean resetOnOvershoot, 
         lastError=error;
         return output;
     }
-    public void setValues(PIDValues vales) {
-        setPID(value.kP, values.kI, values.kD);
+}
+    public void setValues(PIDValues value) {
+        setPID(value.kP, value.kI, value.kD);
     }
     public void resetError() {
         totalError=0;
     }
-}
-
-
-}
-
 }
