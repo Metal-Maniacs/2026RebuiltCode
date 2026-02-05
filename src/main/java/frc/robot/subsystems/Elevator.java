@@ -18,37 +18,41 @@ public class Elevator extends SubsystemBase {
   double ElevatorMultDown = 1;
 
   private SparkMax m_elevatorMotor;
+
   public Elevator() {
     m_elevatorMotor = new SparkMax(DriveConstants.kElevatorCanId, MotorType.kBrushed);
   }
 
-  public void disableUp(){
+  public void disableUp() {
     ElevatorMultUp = 0;
   }
-  public void enableUp(){
+
+  public void enableUp() {
     ElevatorMultUp = 1;
   }
-  public void disableDown(){
+
+  public void disableDown() {
     ElevatorMultDown = 0;
   }
-  public void enableDown(){
+
+  public void enableDown() {
     ElevatorMultDown = 1;
   }
 
-/*
-  public void elevate(double speed){
-    m_elevatorMotor.set(speed);
-  }
-    */
+  /*
+   * public void elevate(double speed){
+   * m_elevatorMotor.set(speed);
+   * }
+   */
 
   public void elevateUp(double elevationSpeed) {
-    m_elevatorMotor.set(elevationSpeed*ElevatorMultUp);
+    m_elevatorMotor.set(elevationSpeed * ElevatorMultUp);
   }
-  
+
   public void elevateDown(double elevationSpeed) {
-    m_elevatorMotor.set(elevationSpeed*ElevatorMultDown);
+    m_elevatorMotor.set(elevationSpeed * ElevatorMultDown);
   }
-  
+
   @Override
   public void periodic() {
     // This method will be called once per scheduler run

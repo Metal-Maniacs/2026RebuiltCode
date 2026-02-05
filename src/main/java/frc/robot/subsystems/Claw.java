@@ -16,9 +16,10 @@ import frc.robot.Constants.DriveConstants;
 public class Claw extends SubsystemBase {
 
   private final SparkMax m_clawMotor;
+
   public Claw() {
     m_clawMotor = new SparkMax(DriveConstants.kClawCanId, MotorType.kBrushless);
-    //addChild("m_clawMotor", (Sendable) m_clawMotor);
+    // addChild("m_clawMotor", (Sendable) m_clawMotor);
   }
 
   public void useClaw(double clawSpeed) {

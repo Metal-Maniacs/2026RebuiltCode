@@ -55,8 +55,7 @@ public class MAXSwerveModule {
         PersistMode.kPersistParameters);
     m_turningSpark.configure(Configs.MAXSwerveModule.turningConfig, ResetMode.kResetSafeParameters,
         PersistMode.kPersistParameters);
-  
-  
+
     m_chassisAngularOffset = chassisAngularOffset;
     m_desiredState.angle = new Rotation2d(m_turningEncoder.getPosition());
     m_drivingEncoder.setPosition(0);
@@ -68,7 +67,7 @@ public class MAXSwerveModule {
    * @return The current state of the module.
    */
 
-  public void run(double speed){
+  public void run(double speed) {
     m_drivingSpark.set(speed);
   }
 

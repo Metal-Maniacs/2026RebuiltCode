@@ -16,7 +16,7 @@ public class AutoDriveForward extends Command {
   private double initTime;
 
   public AutoDriveForward(DriveSubsystem mainDriveSubsystem, double time) {
-    
+
     m_DriveSubsystem = mainDriveSubsystem;
     timeToRun = time;
     initTime = Timer.getTimestamp();
@@ -27,34 +27,33 @@ public class AutoDriveForward extends Command {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    
+
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    if (Timer.getTimestamp() - initTime <= .25){
-      m_DriveSubsystem.drive(0,0, .5, false, 1);
+    if (Timer.getTimestamp() - initTime <= .25) {
+      m_DriveSubsystem.drive(0, 0, .5, false, 1);
+    } else {
+      m_DriveSubsystem.drive(0, 0, 0, false, 0);
     }
-    else{
-      m_DriveSubsystem.drive(0,0, 0, false, 0);
-    }
-    
+
   }
 
   // Called once the command ends or is interrupted.
   @Override
-  public void end(boolean interrupted) {}
+  public void end(boolean interrupted) {
+  }
 
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
     System.out.println(Timer.getTimestamp() - initTime);
     //
-    if (Timer.getTimestamp() - initTime >= timeToRun){
+    if (Timer.getTimestamp() - initTime >= timeToRun) {
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }
