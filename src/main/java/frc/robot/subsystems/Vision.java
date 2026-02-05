@@ -10,7 +10,7 @@ class Vision extends SubsystemBase {
     PoseEstimate pEstimate;
 
     public Vision() {
-        
+
     }
 
     public void periodic() {
