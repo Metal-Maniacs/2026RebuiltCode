@@ -9,7 +9,7 @@ import org.opencv.core.Mat;
 
 import edu.wpi.first.math.controller.ElevatorFeedforward;
 import edu.wpi.first.wpilibj.Timer;
-import frc.robot.subsystems.Elevator;
+import frc.robot.subsystems.Hopper;
 
 @SuppressWarnings("unused")
 public class ElevatorAutoL2 extends Command {
@@ -21,13 +21,13 @@ public class ElevatorAutoL2 extends Command {
    * 
    * /** Creates a new AutoDriveForward.
    */
-  private Elevator mElevator;
+  private Hopper mHopper;
   private double timeToRun; // Duration of command
   private double initTime; // Time when the command started
 
-  public ElevatorAutoL2(double time, Elevator m_elevator) {
+  public ElevatorAutoL2(double time, Hopper m_Hopper) {
     initTime = Timer.getTimestamp(); // Stores current time
-    mElevator = m_elevator;
+    mHopper = m_Hopper;
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
@@ -43,7 +43,7 @@ public class ElevatorAutoL2 extends Command {
     System.out.println(Timer.getTimestamp() - initTime);
     // Before 2 seconds
     while (Timer.getTimestamp() - initTime < 2) {
-      mElevator.elevateDown(.5d);
+      mHopper.moveLeft(.5d);
     }
     // After 2 seconds and before 2.5 seconds
     /*

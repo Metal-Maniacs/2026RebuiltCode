@@ -13,31 +13,31 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.DriveConstants;
 
 @SuppressWarnings("unused")
-public class Elevator extends SubsystemBase {
+public class Hopper extends SubsystemBase {
 
-  double ElevatorMultUp = 1;
-  double ElevatorMultDown = 1;
+  double HopperMultRight = 1;
+  double HopperMultLeft = 1;
 
-  private SparkMax m_elevatorMotor;
+  private SparkMax m_HopperMotor;
 
-  public Elevator() {
-    m_elevatorMotor = new SparkMax(DriveConstants.kElevatorCanId, MotorType.kBrushed);
+  public Hopper() {
+    m_HopperMotor = new SparkMax(DriveConstants.kHopperCanId, MotorType.kBrushed);
   }
 
-  public void disableUp() {
-    ElevatorMultUp = 0;
+  public void disableRight() {
+    HopperMultRight = 0;
   }
 
-  public void enableUp() {
-    ElevatorMultUp = 1;
+  public void enableRight() {
+    HopperMultRight = 1;
   }
 
-  public void disableDown() {
-    ElevatorMultDown = 0;
+  public void disableLeft() {
+    HopperMultLeft = 0;
   }
 
-  public void enableDown() {
-    ElevatorMultDown = 1;
+  public void enableLeft() {
+    HopperMultLeft = 1;
   }
 
   /*
@@ -46,12 +46,12 @@ public class Elevator extends SubsystemBase {
    * }
    */
 
-  public void elevateUp(double elevationSpeed) {
-    m_elevatorMotor.set(elevationSpeed * ElevatorMultUp);
+  public void moveRight(double hopperSpeed) {
+    m_HopperMotor.set(hopperSpeed * HopperMultRight);
   }
 
-  public void elevateDown(double elevationSpeed) {
-    m_elevatorMotor.set(elevationSpeed * ElevatorMultDown);
+  public void moveLeft(double hopperSpeed) {
+    m_HopperMotor.set(hopperSpeed * HopperMultLeft);
   }
 
   @Override

@@ -58,7 +58,7 @@ public class Robot extends TimedRobot {
   CommandXboxController controller;
   UsbCamera driveCam;
   UsbCamera clawCam;
-  UsbCamera elevatorCam;
+  
 
   VideoSink server;
 
@@ -218,25 +218,25 @@ public class Robot extends TimedRobot {
 
     if (elevatorStopTop.get() == false){
       if (m_robotContainer.m_subsystemController.povUp().getAsBoolean() == true){
-            m_robotContainer.m_elevator.elevateUp(-1);
+            m_robotContainer.m_Hopper.moveRight(1);
       }
       if (m_robotContainer.m_subsystemController.povUp().getAsBoolean() == false){
-            m_robotContainer.m_elevator.elevateUp(0);
+            m_robotContainer.m_Hopper.moveRight(0);
       }
     if (elevatorStopTop.get() == true){
-      m_robotContainer.m_elevator.elevateUp(0);
+      m_robotContainer.m_Hopper.moveRight(0);
       }
     }
 
     if (elevatorStopBottom.get() == false){
       if (m_robotContainer.m_subsystemController.povDown().getAsBoolean() == true){
-            m_robotContainer.m_elevator.elevateDown(1);
+            m_robotContainer.m_Hopper.moveLeft(-1);
       }
       if (m_robotContainer.m_subsystemController.povDown().getAsBoolean() == false){
-            m_robotContainer.m_elevator.elevateDown(0);
+            m_robotContainer.m_Hopper.moveLeft(0);
       } 
     if (elevatorStopBottom.get() == true){
-      m_robotContainer.m_elevator.elevateDown(0);
+      m_robotContainer.m_Hopper.moveLeft(0);
       }
     }
   }

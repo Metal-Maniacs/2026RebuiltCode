@@ -1,5 +1,7 @@
 package frc.robot;
 
+//from 2202Programming on GitHub
+
 public class PIDController {
 
     private double kP;
@@ -9,12 +11,15 @@ public class PIDController {
     private double lastError;
     private boolean resetOnOvershoot, daveyDTrick;
 
+// PIDController DRIVE_CONTROLL = new PIDController (0.0015, 0.0001,0, DRIVER_ENCODER, DRIVE_MOTORS);
+
     /**
      * A default constructor for a PIDController<br>
      * Must set pid values before ussing calculate
      */
     public PIDController() {
         this(0, 0, 0, true, true);
+        
     }
 
     public PIDController(PIDValues values) {

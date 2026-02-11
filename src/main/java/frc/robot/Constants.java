@@ -57,12 +57,20 @@ public final class Constants {
     public static final int kFrontRightTurningCanId = 1;
     public static final int kRearRightTurningCanId = 4;
 
-    // DEEP CLIMB SPARK MAX CAN ID
-    public static final int kElevatorCanId = 9;
-    // CLAW SPARK MAX CAN ID
-    public static final int kClawCanId = 10;
-    // ELEVATOR SPARK MAX CAN ID
-    public static final int kClimbCanId = 11;
+    // HOOPER SPARK MAX CAN ID
+    public static final int kHopperCanId = 9;
+    // HOOPER IN AND OUT SPARKMAX CAN ID 
+    public static final int kRollerHopperCanId = 10;
+    public static final int kExtendHopperCanId = 11;
+
+    // Shooter
+    public static final int kShooterCanId = 12;
+    public static final int kSusanShooterCanId = 13;
+
+
+    public static final int kClimbCanId = 14;
+
+
 
     public static final boolean kGyroReversed = false;
   }

@@ -51,7 +51,7 @@ public class DriveSubsystem extends SubsystemBase {
   private final ADIS16470_IMU m_gyro = new ADIS16470_IMU();
 
   //can be used to reduce the speed of the motors
-  //changed "private double" to "public double" and the yellow line went away???
+
   public double multiplierOfSpeed = 1;
 
   // Odometry class for tracking robot pose

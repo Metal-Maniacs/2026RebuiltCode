@@ -24,10 +24,10 @@ import frc.robot.commands.AutoDriveForward;
 import frc.robot.commands.LeftAuto;
 import frc.robot.commands.RightAuto;
 //import frc.robot.commands.MiddleAuto;
-import frc.robot.subsystems.Claw;
+import frc.robot.subsystems.Shooter;
 import frc.robot.subsystems.DriveSubsystem;
-import frc.robot.subsystems.Elevator;
-//import frc.robot.subsystems.Climb;
+import frc.robot.subsystems.Hopper;
+import frc.robot.subsystems.Climb;
 import edu.wpi.first.wpilibj2.command.Command;
 //import edu.wpi.first.wpilibj2.command.StartEndCommand;
 import edu.wpi.first.wpilibj2.command.RunCommand;
@@ -51,8 +51,8 @@ public class RobotContainer {
  
   // The robot's subsystems
   final DriveSubsystem m_robotDrive = new DriveSubsystem();
-  public final Elevator m_elevator = new Elevator();
-  private final Claw m_claw = new Claw();
+  public final Hopper m_Hopper = new Hopper();
+  private final Shooter m_claw = new Shooter();
   //private final Climb m_climb = new Climb();
 
    //DigitalInput elevatorStop;

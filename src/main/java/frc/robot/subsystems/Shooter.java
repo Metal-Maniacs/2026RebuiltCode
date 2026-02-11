@@ -14,17 +14,17 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.DriveConstants;
 
 @SuppressWarnings("unused")
-public class Claw extends SubsystemBase {
+public class Shooter extends SubsystemBase {
 
-  private final SparkMax m_clawMotor;
+  private final SparkMax m_shooterMotor;
 
-  public Claw() {
-    m_clawMotor = new SparkMax(DriveConstants.kClawCanId, MotorType.kBrushless);
+  public Shooter() {
+    m_shooterMotor = new SparkMax(DriveConstants.kShooterCanId, MotorType.kBrushless);
     // addChild("m_clawMotor", (Sendable) m_clawMotor);
   }
 
-  public void useClaw(double clawSpeed) {
-    m_clawMotor.set(clawSpeed);
+  public void useShooter(double shooterSpeed) {
+    m_shooterMotor.set(shooterSpeed);
   }
 
   @Override
