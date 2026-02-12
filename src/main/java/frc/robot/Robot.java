@@ -59,7 +59,6 @@ public class Robot extends TimedRobot {
   UsbCamera driveCam;
   UsbCamera clawCam;
   
-
   VideoSink server;
 
   private Command m_autonomousCommand;
@@ -71,7 +70,7 @@ public class Robot extends TimedRobot {
   boolean topLimitPressed;
   boolean bottomLimitPressed;
 
-  Thread m_visionThread;
+  Thread m_visionThread; // This creates a thread that runs parallel to other code.
 
   /** Called once at the beginning of the robot program. */
   public Robot() {
@@ -110,11 +109,6 @@ public class Robot extends TimedRobot {
      */
    // m_ClosedLoopController = m_motor.getClosedLoopController();
 
-    
-    
-    
-    
-    
     //ogcode
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.

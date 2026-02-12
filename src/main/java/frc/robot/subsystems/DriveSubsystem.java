@@ -7,6 +7,7 @@ package frc.robot.subsystems;
 import edu.wpi.first.hal.FRCNetComm.tInstances;
 import edu.wpi.first.hal.FRCNetComm.tResourceType;
 import edu.wpi.first.hal.HAL;
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
@@ -26,6 +27,12 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class DriveSubsystem extends SubsystemBase {
   // Create MAXSwerveModules
+  public Encoder eFrontRight = new Encoder(0, 1, false, Encoder.EncodingType.k4X); // PLACEHOLDER DIO PINS -- PLEASE CHANGE :P
+  public Encoder eFrontLeft = new Encoder(2, 3, false, Encoder.EncodingType.k4X);
+  public Encoder eBackRight = new Encoder(4, 5, false, Encoder.EncodingType.k4X);
+  public Encoder eBackLeft = new Encoder(6, 7, false, Encoder.EncodingType.k4X);
+
+  public Encoder[] Encoders = {eFrontRight, eFrontLeft, eBackRight, eBackLeft};
 
   private final MAXSwerveModule m_frontRight = new MAXSwerveModule(
       DriveConstants.kFrontRightDrivingCanId,
@@ -72,6 +79,11 @@ public class DriveSubsystem extends SubsystemBase {
     // Usage reporting for MAXSwerve template
     HAL.report(tResourceType.kResourceType_RobotDrive, tInstances.kRobotDriveSwerve_MaxSwerve);
 
+    for (Encoder encoder : Encoders) {
+      encoder.setDistancePerPulse(1/217); // encoder returns 1 inch / 217 ticks
+      encoder.setMinRate(10);
+      encoder.reset();
+    }
     /* 
      // All other subsystem initialization
     // ...
