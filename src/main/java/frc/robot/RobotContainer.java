@@ -52,7 +52,7 @@ public class RobotContainer {
   // The robot's subsystems
   final DriveSubsystem m_robotDrive = new DriveSubsystem();
   public final Hopper m_Hopper = new Hopper();
-  private final Shooter m_claw = new Shooter();
+  private final Shooter m_Shooter = new Shooter();
   //private final Climb m_climb = new Climb();
 
    //DigitalInput elevatorStop;
@@ -207,20 +207,20 @@ public class RobotContainer {
     );
   }
 */
-/* 
+
      m_subsystemController.povRight().whileTrue(
         new StartEndCommand(
-            () -> m_claw.useClaw(-1), 
-            () -> m_claw.useClaw(0), 
-            m_claw)
+            () -> m_Shooter.useShooter(-1), 
+            () -> m_Shooter.useShooter(0), 
+            m_Shooter)
     );
     m_subsystemController.povLeft().whileTrue(
         new StartEndCommand(
-            () -> m_claw.useClaw(.8), 
-            () -> m_claw.useClaw(0),
-            m_claw)
+            () -> m_Shooter.useShooter(.8), 
+            () -> m_Shooter.useShooter(0),
+            m_Shooter)
     );
-    */
+    
 
 //i wanna cry
      

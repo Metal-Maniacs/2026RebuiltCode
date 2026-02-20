@@ -58,7 +58,8 @@ public final class Constants {
     public static final int kRearRightTurningCanId = 4;
 
     // HOPPER SPARK MAX CAN ID
-    public static final int kHopperCanId = 9;
+     public static final int kHopperCanId = 9;
+
     // HOPPER IN AND OUT SPARKMAX CAN ID 
     public static final int kRollerHopperCanId = 10;
     public static final int kExtendHopperCanId = 11;
