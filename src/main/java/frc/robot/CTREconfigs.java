@@ -10,7 +10,7 @@ import com.ctre.phoenix6.signals.NeutralModeValue;
 //import com.ctre.phoenix6.configs.TalonFXConfiguration;
 
 
-
+@SuppressWarnings("unused")
 public final class CTREconfigs {
 
   
