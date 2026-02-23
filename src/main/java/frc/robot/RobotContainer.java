@@ -5,6 +5,8 @@
 
 package frc.robot;
 
+import com.ctre.phoenix6.hardware.TalonFX;
+
 import edu.wpi.first.math.MathUtil;
 import edu.wpi.first.wpilibj.DigitalInput;
 /*import edu.wpi.first.math.controller.PIDController;
@@ -26,8 +28,10 @@ import frc.robot.commands.RightAuto;
 //import frc.robot.commands.MiddleAuto;
 import frc.robot.subsystems.Shooter;
 import frc.robot.subsystems.DriveSubsystem;
-import frc.robot.subsystems.Hopper;
-import frc.robot.subsystems.Climb;
+
+//import frc.robot.subsystems.Hopper;
+//import frc.robot.subsystems.Climb;
+
 import edu.wpi.first.wpilibj2.command.Command;
 //import edu.wpi.first.wpilibj2.command.StartEndCommand;
 import edu.wpi.first.wpilibj2.command.RunCommand;
@@ -51,8 +55,11 @@ public class RobotContainer {
  
   // The robot's subsystems
   final DriveSubsystem m_robotDrive = new DriveSubsystem();
-  public final Hopper m_Hopper = new Hopper();
+ // public final Hopper m_Hopper = new Hopper();
   private final Shooter m_Shooter = new Shooter();
+
+    //motor.setControl(new DutyCycleOut(1.0)); // 100% full speed positive.
+
   //private final Climb m_climb = new Climb();
 
    //DigitalInput elevatorStop;
@@ -66,11 +73,11 @@ public class RobotContainer {
   // Controller Buttons
   Trigger xButton = m_driverController.x();
 
- double elevateSpeedTop = -.75;
- double elevateSpeedBottom = .75;
+// double elevateSpeedTop = -.75;
+ //double elevateSpeedBottom = .75;
 
  
-  public void disableElevatorUp(){
+ /* public void disableElevatorUp(){
     elevateSpeedTop = 0;
   }
   public void enableElevatorUp(){
@@ -82,7 +89,7 @@ public class RobotContainer {
   }
   public void enableElevatorDown(){
     elevateSpeedBottom = .75;
-  }
+  }*/
 
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
@@ -214,6 +221,8 @@ public class RobotContainer {
             () -> m_Shooter.useShooter(0), 
             m_Shooter)
     );
+            //motor.setControl(new DutyCycleOut(1.0))
+            
     m_subsystemController.povLeft().whileTrue(
         new StartEndCommand(
             () -> m_Shooter.useShooter(.8), 

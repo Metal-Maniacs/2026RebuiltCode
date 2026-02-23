@@ -1,14 +1,28 @@
 package frc.robot;
 
-  //import com.ctre.phoenix6.configs.CANcoderConfiguration;
+import com.ctre.phoenix6.configs.CurrentLimitsConfigs;
+import com.ctre.phoenix6.configs.MotorOutputConfigs;
+import com.ctre.phoenix6.configs.TalonFXConfiguration;
+import com.ctre.phoenix6.signals.InvertedValue;
+import com.ctre.phoenix6.signals.NeutralModeValue;
+
+//import com.ctre.phoenix6.configs.CANcoderConfiguration;
 //import com.ctre.phoenix6.configs.TalonFXConfiguration;
 
+
+
 public final class CTREconfigs {
+
+  
+
+ // var talonFXConfigs = new TalonFXConfiguration();
+
     //public TalonFXConfiguration swerveAngleFXConfig = new TalonFXConfiguration();
     //public TalonFXConfiguration swerveDriveFXConfig = new TalonFXConfiguration();
     //public CANcoderConfiguration swerveCANcoderConfig = new CANcoderConfiguration();
 
     public CTREconfigs(){
+
         /** Swerve CANCoder Configuration */
         //swerveCANcoderConfig.MagnetSensor.SensorDirection = Constants.Swerve.cancoderInvert;
 

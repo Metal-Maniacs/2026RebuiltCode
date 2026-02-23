@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import com.ctre.phoenix6.hardware.TalonFX;
+
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
 import edu.wpi.first.math.trajectory.TrapezoidProfile;
@@ -58,18 +60,21 @@ public final class Constants {
     public static final int kRearRightTurningCanId = 4;
 
     // HOPPER SPARK MAX CAN ID
-     public static final int kHopperCanId = 9;
+    // public static final int kHopperCanId = 9;
 
     // HOPPER IN AND OUT SPARKMAX CAN ID 
-    public static final int kRollerHopperCanId = 10;
-    public static final int kExtendHopperCanId = 11;
+  /*   public static final int kRollerHopperCanId = 10;
+    public static final int kExtendHopperCanId = 11;*/
 
     // Shooter
-    public static final int kShooterCanId = 12;
-    public static final int kSusanShooterCanId = 13;
+    public static final int SHOOTER_CAN_ID = 0;
+    
+    //public static final int kShooterCanId = 12;
+    
+    //public static final int kSusanShooterCanId = 13;
 
 
-    public static final int kClimbCanId = 14;
+   // public static final int kClimbCanId = 14;
 
 
 

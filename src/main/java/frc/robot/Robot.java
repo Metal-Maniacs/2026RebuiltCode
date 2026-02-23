@@ -23,6 +23,13 @@ import edu.wpi.first.wpilibj2.command.StartEndCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.RobotContainer;
 
+import com.ctre.phoenix6.CANBus;
+import com.ctre.phoenix6.configs.MotorOutputConfigs;
+import com.ctre.phoenix6.controls.Follower;
+import com.ctre.phoenix6.hardware.TalonFX;
+import com.ctre.phoenix6.hardware.core.CoreTalonFX;
+import com.ctre.phoenix6.signals.InvertedValue;
+import com.ctre.phoenix6.signals.MotorAlignmentValue;
 import com.revrobotics.RelativeEncoder;
 import com.revrobotics.spark.SparkClosedLoopController;
 import com.revrobotics.spark.SparkMax;
@@ -72,9 +79,18 @@ public class Robot extends TimedRobot {
   boolean bottomLimitPressed;
 
   Thread m_visionThread; // This creates a thread that runs parallel to other code.
+  public CoreTalonFX m_shooterMotor;
 
   /** Called once at the beginning of the robot program. */
   public Robot() {
+  // talonfx
+  var currentConfigs = new MotorOutputConfigs();
+
+   // The left motor is CCW+
+   currentConfigs.Inverted = InvertedValue.CounterClockwise_Positive;
+   m_shooterMotor.getConfigurator().apply(currentConfigs);
+
+  
  //private RelativeEncoder m_encoder;
     //driveCam = CameraServer.startAutomaticCapture(0);
     //clawCam = CameraServer.startAutomaticCapture(0);
@@ -84,6 +100,7 @@ public class Robot extends TimedRobot {
     //clawCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
     //elevatorCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
 
+  
   }
 
   /**
@@ -184,8 +201,8 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
   
-  System.out.println("Bottom Speed: " + m_robotContainer.elevateSpeedBottom);
-  System.out.println("Top speed: " + m_robotContainer.elevateSpeedTop);
+ // System.out.println("Bottom Speed: " + m_robotContainer.elevateSpeedBottom);
+  //System.out.println("Top speed: " + m_robotContainer.elevateSpeedTop);
   /* 
     //Disables upwards elevator movement
     if (elevatorStopTop.get() == true){
@@ -204,12 +221,12 @@ public class Robot extends TimedRobot {
     }
     if (elevatorStopBottom.get() == false){
       //m_robotContainer.m_elevator.enableDown();
-      bottomLimitPressed = false;
-    }*/
+      bottomLimitPressed = false;*/
+    }
 
   
     //Handles elevator controller bindings
-
+/* 
 
     if (elevatorStopTop.get() == false){
       if (m_robotContainer.m_subsystemController.povUp().getAsBoolean() == true){
@@ -234,7 +251,7 @@ public class Robot extends TimedRobot {
       m_robotContainer.m_Hopper.moveLeft(0);
       }
     }
-  }
+  }*/
 
 /*     if (bottomLimitPressed == false){
       if (m_robotContainer.m_subsystemController.povDown().getAsBoolean() == false && m_robotContainer.m_subsystemController.povUp().getAsBoolean() == false){

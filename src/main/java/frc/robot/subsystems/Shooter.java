@@ -7,6 +7,15 @@ package frc.robot.subsystems;
 import com.revrobotics.spark.SparkMax;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 
+import com.ctre.phoenix6.configs.CANcoderConfiguration;
+import com.ctre.phoenix6.configs.TalonFXConfiguration;
+import com.ctre.phoenix6.controls.DutyCycleOut;
+import com.ctre.phoenix6.hardware.CANcoder;
+import com.ctre.phoenix6.hardware.TalonFX;
+import com.ctre.phoenix6.hardware.core.CoreTalonFX;
+import com.ctre.phoenix6.signals.InvertedValue;
+import com.ctre.phoenix6.sim.TalonFXSimState;
+
 import edu.wpi.first.util.sendable.Sendable;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -14,17 +23,19 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.DriveConstants;
 
 @SuppressWarnings("unused")
+
 public class Shooter extends SubsystemBase {
 
-  private final SparkMax m_shooterMotor;
+  private final TalonFX Shooter_motor;
 
   public Shooter() {
-    m_shooterMotor = new SparkMax(DriveConstants.kShooterCanId, MotorType.kBrushless);
-    // addChild("m_clawMotor", (Sendable) m_clawMotor);
+
+    Shooter_motor = new TalonFX(DriveConstants.SHOOTER_CAN_ID);
+    
   }
 
   public void useShooter(double shooterSpeed) {
-    m_shooterMotor.set(shooterSpeed);
+    Shooter_motor.set(shooterSpeed);
   }
 
   @Override

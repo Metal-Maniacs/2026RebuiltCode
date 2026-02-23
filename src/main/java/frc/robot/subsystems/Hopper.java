@@ -4,16 +4,17 @@
 
 package frc.robot.subsystems;
 
-import com.revrobotics.spark.SparkMax;
+/*import com.revrobotics.spark.SparkMax;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import frc.robot.Constants.DriveConstants;
+*/
+//@SuppressWarnings("unused")
 
-@SuppressWarnings("unused")
-public class Hopper extends SubsystemBase {
+/*public class Hopper extends SubsystemBase {
 
   double HopperMultRight = 1;
   double HopperMultLeft = 1;
@@ -22,9 +23,9 @@ public class Hopper extends SubsystemBase {
 
   public Hopper() {
     m_HopperMotor = new SparkMax(DriveConstants.kHopperCanId, MotorType.kBrushed);
-  }
+  }*/
 
-  public void disableRight() {
+  /*public void disableRight() {
     HopperMultRight = 0;
   }
 
@@ -39,6 +40,7 @@ public class Hopper extends SubsystemBase {
   public void enableLeft() {
     HopperMultLeft = 1;
   }
+*/
 
   /*
    * public void elevate(double speed){
@@ -46,7 +48,7 @@ public class Hopper extends SubsystemBase {
    * }
    */
 
-  public void moveRight(double hopperSpeed) {
+  /*public void moveRight(double hopperSpeed) {
     m_HopperMotor.set(hopperSpeed * HopperMultRight);
   }
 
@@ -63,4 +65,4 @@ public class Hopper extends SubsystemBase {
   public void simulationPeriodic() {
     // This method will be called once per scheduler run during simulation
   }
-}
+}*/
