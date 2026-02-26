@@ -26,16 +26,16 @@ import frc.robot.Constants.DriveConstants;
 
 public class Shooter extends SubsystemBase {
 
-  private final TalonFX Shooter_motor;
+  private final TalonFX shooterMotor;
 
   public Shooter() {
 
-    Shooter_motor = new TalonFX(DriveConstants.SHOOTER_CAN_ID);
+    shooterMotor = new TalonFX(DriveConstants.kShooterCanId);
     
   }
 
   public void useShooter(double shooterSpeed) {
-    Shooter_motor.set(shooterSpeed);
+    shooterMotor.set(shooterSpeed);
   }
 
   @Override
