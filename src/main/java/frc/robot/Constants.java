@@ -41,13 +41,13 @@ public final class Constants {
         new Translation2d(kWheelBase / 2, -kTrackWidth / 2),
         new Translation2d(-kWheelBase / 2, kTrackWidth / 2),
         new Translation2d(-kWheelBase / 2, -kTrackWidth / 2));
-
-    // Angular offsets of the modules relative to the chassis in radians
+        
+        // Angular offsets of the modules relative to the chassis in radians
     public static final double kFrontLeftChassisAngularOffset = -Math.PI / 2;
     public static final double kFrontRightChassisAngularOffset = 0;
     public static final double kBackLeftChassisAngularOffset = Math.PI;
     public static final double kBackRightChassisAngularOffset = Math.PI / 2;
-
+    
     // Neo Vortex CAN IDs (Drive Motors)
      public static final int kFrontLeftDrivingCanId = 6;
     public static final int kRearLeftDrivingCanId = 7;
@@ -59,7 +59,7 @@ public final class Constants {
     public static final int kRearLeftTurningCanId = 3;
     public static final int kFrontRightTurningCanId = 1;
     public static final int kRearRightTurningCanId = 4;
-
+    
     // HOPPER SPARK MAX CAN ID
      public static final int kHopperCanId = 9;
 
