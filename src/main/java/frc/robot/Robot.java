@@ -79,16 +79,18 @@ public class Robot extends TimedRobot {
   boolean bottomLimitPressed;
 
   Thread m_visionThread; // This creates a thread that runs parallel to other code.
-  public CoreTalonFX m_shooterMotor;
+  public CoreTalonFX Shooter_motor;
 
   /** Called once at the beginning of the robot program. */
   public Robot() {
+Shooter_motor = new CoreTalonFX(0);
+
   // talonfx
   var currentConfigs = new MotorOutputConfigs();
 
    // The left motor is CCW+
    currentConfigs.Inverted = InvertedValue.CounterClockwise_Positive;
-   m_shooterMotor.getConfigurator().apply(currentConfigs);
+   Shooter_motor.getConfigurator().apply(currentConfigs);
 
   
  //private RelativeEncoder m_encoder;
@@ -135,8 +137,8 @@ public class Robot extends TimedRobot {
    // elevatorStopTop = new DigitalInput(1);
     //elevatorStopBottom = new DigitalInput(0);
 
-    topLimitPressed = false;
-    bottomLimitPressed = false;
+    //topLimitPressed = false;
+    //bottomLimitPressed = false;
 
   }
 

@@ -49,7 +49,7 @@ public final class Constants {
     public static final double kBackRightChassisAngularOffset = Math.PI / 2;
 
     // Neo Vortex CAN IDs (Drive Motors)
-    public static final int kFrontLeftDrivingCanId = 6;
+     public static final int kFrontLeftDrivingCanId = 6;
     public static final int kRearLeftDrivingCanId = 7;
     public static final int kFrontRightDrivingCanId = 5;
     public static final int kRearRightDrivingCanId = 8;
@@ -61,21 +61,21 @@ public final class Constants {
     public static final int kRearRightTurningCanId = 4;
 
     // HOPPER SPARK MAX CAN ID
-    // public static final int kHopperCanId = 9;
+     public static final int kHopperCanId = 9;
 
     // HOPPER IN AND OUT SPARKMAX CAN ID 
-  /*   public static final int kRollerHopperCanId = 10;
-    public static final int kExtendHopperCanId = 11;*/
+     public static final int kRollerHopperCanId = 10;
+    public static final int kExtendHopperCanId = 11;
 
     // Shooter
     public static final int SHOOTER_CAN_ID = 0;
     
     //public static final int kShooterCanId = 12;
     
-    //public static final int kSusanShooterCanId = 13;
+    public static final int kSusanShooterCanId = 13;
 
 
-   // public static final int kClimbCanId = 14;
+    public static final int kClimbCanId = 14;
 
 
 

@@ -4,7 +4,7 @@
 
 package frc.robot.subsystems;
 
-/*import com.revrobotics.spark.SparkMax;
+import com.revrobotics.spark.SparkMax;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 
 import edu.wpi.first.util.sendable.Sendable;
@@ -35,4 +35,4 @@ public class Climb extends SubsystemBase {
   public void simulationPeriodic() {
     // This method will be called once per scheduler run during simulation
   }
-}*/
+}

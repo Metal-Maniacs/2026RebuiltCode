@@ -217,15 +217,15 @@ public class RobotContainer {
 
      m_subsystemController.povRight().whileTrue(
         new StartEndCommand(
-            () -> m_Shooter.useShooter(-1), 
+            () -> m_Shooter.useShooter(-.5), 
             () -> m_Shooter.useShooter(0), 
             m_Shooter)
     );
             //motor.setControl(new DutyCycleOut(1.0))
-            
+
     m_subsystemController.povLeft().whileTrue(
         new StartEndCommand(
-            () -> m_Shooter.useShooter(.8), 
+            () -> m_Shooter.useShooter(.5), 
             () -> m_Shooter.useShooter(0),
             m_Shooter)
     );
