@@ -5,9 +5,15 @@ import frc.robot.Constants;
 import frc.robot.LimelightHelpers;
 import frc.robot.LimelightHelpers.PoseEstimate;
 import edu.wpi.first.math.geometry.Pose2d;
+import edu.wpi.first.math.geometry.Rotation2d;
+import edu.wpi.first.math.geometry.Translation2d;
+import static edu.wpi.first.units.Units.Inches;
+import edu.wpi.first.units.Units;
+import edu.wpi.first.units.measure.Distance;
 //import edu.wpi.first.units.measure.AngularVelocity;
 import frc.robot.Constants;
 
+@SuppressWarnings("unused")
 class Vision extends SubsystemBase {
 
     PoseEstimate pEstimate = new PoseEstimate();
@@ -27,6 +33,11 @@ class Vision extends SubsystemBase {
 
     public void update() { // Updates pose estimate
         PoseEstimate currentEstimate = LimelightHelpers.getBotPoseEstimate_wpiBlue(Constants.limelightName);
+        // We want to rotate the percieved position of the robot, because our Limelight is on a rotating turret
+        // I hope your math classes are fun for you, because this will take some calculation
+        // We need to know the rotation of the shooter (using an encoder), and the relative location of the
+        // center of the robot (we can make a formula for this, possibly using trig)
+        currentEstimate.pose.rotateAround(new Translation2d(), new Rotation2d());
         if (currentEstimate != null && !isUpdateSus(currentEstimate)) {
             pEstimate = currentEstimate;
             pose = currentEstimate.pose;
@@ -35,11 +46,12 @@ class Vision extends SubsystemBase {
 
     @Override
     public void periodic() {
-
+        
     }
 
     @Override
     public void simulationPeriodic() {
+        periodic();
         // This method will be called once per scheduler run during simulation
     }
 }
