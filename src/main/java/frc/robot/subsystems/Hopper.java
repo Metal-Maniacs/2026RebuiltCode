@@ -12,8 +12,8 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import frc.robot.Constants.DriveConstants;
-@SuppressWarnings("unused")
 
+@SuppressWarnings("unused")
 public class Hopper extends SubsystemBase {
 
   double HopperMultRight = 1;
