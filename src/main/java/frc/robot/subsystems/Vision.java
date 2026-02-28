@@ -1,22 +1,36 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants;
 import frc.robot.LimelightHelpers;
 import frc.robot.LimelightHelpers.PoseEstimate;
 import edu.wpi.first.math.geometry.Pose2d;
-import edu.wpi.first.units.measure.AngularVelocity;
-//import frc.robot.Constants;
+//import edu.wpi.first.units.measure.AngularVelocity;
+import frc.robot.Constants;
 
 class Vision extends SubsystemBase {
 
-    PoseEstimate pEstimateRight = new PoseEstimate();
-    PoseEstimate pEstimateLeft = new PoseEstimate();
-    PoseEstimate pEstimateBack = new PoseEstimate();
-    Pose2d pRight = new Pose2d(), pLeft = new Pose2d(), pBack = new Pose2d();
-    LimelightHelpers helper;
+    PoseEstimate pEstimate = new PoseEstimate();
+    Pose2d pose = new Pose2d();
 
     public Vision() {
 
+    }
+
+    public PoseEstimate getEstimate() { // Returns the most recent pose estimate
+        return pEstimate;
+    }
+
+    public boolean isUpdateSus(PoseEstimate e) {
+        return (e.tagCount == 0);
+    }
+
+    public void update() { // Updates pose estimate
+        PoseEstimate currentEstimate = LimelightHelpers.getBotPoseEstimate_wpiBlue(Constants.limelightName);
+        if (currentEstimate != null && !isUpdateSus(currentEstimate)) {
+            pEstimate = currentEstimate;
+            pose = currentEstimate.pose;
+        }
     }
 
     @Override

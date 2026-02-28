@@ -25,6 +25,7 @@ import edu.wpi.first.math.util.Units;
  */
 @SuppressWarnings("unused")
 public final class Constants {
+  public static final String limelightName = "limelight"; // Can someone double check this?
   public static final class DriveConstants {
     // Driving Parameters - Note that these are not the maximum capable speeds of
     // the robot, rather the allowed maximum speeds
@@ -74,20 +75,18 @@ public final class Constants {
     
     public static final int kSusanShooterCanId = 13;
 
-
     public static final int kClimbCanId = 14;
-
-
-
+    
+    
     public static final boolean kGyroReversed = false;
   }
-
+  
   public static final class ModuleConstants {
     // The MAXSwerve module can be configured with one of three pinion gears: 12T,
     // 13T, or 14T. This changes the drive speed of the module (a pinion gear with
     // more teeth will result in a robot that drives faster).
     public static final int kDrivingMotorPinionTeeth = 16;
-
+    
     // Calculations required for driving motor conversion factors and feed forward
     public static final double kDrivingMotorFreeSpeedRps = NeoMotorConstants.kFreeSpeedRpm / 60;
     public static final double kWheelDiameterMeters = 0.0762;
@@ -96,9 +95,9 @@ public final class Constants {
     // teeth on the bevel pinion
     public static final double kDrivingMotorReduction = (45.0 * 22) / (kDrivingMotorPinionTeeth * 15);
     public static final double kDriveWheelFreeSpeedRps = (kDrivingMotorFreeSpeedRps * kWheelCircumferenceMeters)
-        / kDrivingMotorReduction;
+    / kDrivingMotorReduction;
   }
-
+  
   public static final class OIConstants {
     public static final int kDriverControllerPort = 0;
     public static final int kSubsystemControllerPort = 1;
@@ -110,17 +109,17 @@ public final class Constants {
     public static final double kMaxAccelerationMetersPerSecondSquared = 3;
     public static final double kMaxAngularSpeedRadiansPerSecond = Math.PI;
     public static final double kMaxAngularSpeedRadiansPerSecondSquared = Math.PI;
-
+    
     public static final double kPXController = 1;
     public static final double kPYController = 1;
     public static final double kPThetaController = 1;
-
+    
     // Constraint for the motion profiled robot angle controller
     public static final TrapezoidProfile.Constraints kThetaControllerConstraints = new TrapezoidProfile.Constraints(
-        kMaxAngularSpeedRadiansPerSecond, kMaxAngularSpeedRadiansPerSecondSquared);
-  }
-
-  public static final class NeoMotorConstants {
+      kMaxAngularSpeedRadiansPerSecond, kMaxAngularSpeedRadiansPerSecondSquared);
+    }
+    
+    public static final class NeoMotorConstants {
     public static final double kFreeSpeedRpm = 5676;
   }
 }
