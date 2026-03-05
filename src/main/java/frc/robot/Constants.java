@@ -70,13 +70,16 @@ public final class Constants {
 
     // Shooter
     public static final int SHOOTER_CAN_ID = 0;
-    
+  
+
     //public static final int kShooterCanId = 12;
     
-    public static final int kSusanShooterCanId = 13;
+    public static final int kSusanShooterCanId = 12;
+    public static final int kArchShooterCanId = 13;
 
     public static final int kClimbCanId = 14;
-    
+    public static final int kClimberHelperId = 15;  
+      
     
     public static final boolean kGyroReversed = false;
   }

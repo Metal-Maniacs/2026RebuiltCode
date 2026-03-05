@@ -14,12 +14,12 @@ import edu.wpi.first.units.measure.Distance;
 import frc.robot.Constants;
 
 @SuppressWarnings("unused")
-class Vision extends SubsystemBase {
+class Limelight extends SubsystemBase {
 
     PoseEstimate pEstimate = new PoseEstimate();
     Pose2d pose = new Pose2d();
 
-    public Vision() {
+    public Limelight() {
 
     }
 
