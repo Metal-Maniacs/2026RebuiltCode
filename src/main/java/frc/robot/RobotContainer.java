@@ -56,7 +56,7 @@ public class RobotContainer {
   // The robot's subsystems
   final DriveSubsystem m_robotDrive = new DriveSubsystem();
  // public final Hopper m_Hopper = new Hopper();
-  private final Shooter m_Shooter = new Shooter();
+  private final Shooter shooterMotor = new Shooter();
 
     //motor.setControl(new DutyCycleOut(1.0)); // 100% full speed positive.
 
@@ -217,17 +217,17 @@ public class RobotContainer {
 
      m_subsystemController.povRight().whileTrue(
         new StartEndCommand(
-            () -> m_Shooter.useShooter(-1),
-            () -> m_Shooter.useShooter(0), 
-            m_Shooter)
+            () -> shooterMotor.useShooter(-0.05),
+            () -> shooterMotor.useShooter(0), 
+            shooterMotor)
     );
             //motor.setControl(new DutyCycleOut(1.0))
 
     m_subsystemController.povLeft().whileTrue(
         new StartEndCommand(
-            () -> m_Shooter.useShooter(1), 
-            () -> m_Shooter.useShooter(0),
-            m_Shooter)
+            () -> shooterMotor.useShooter(0.05), 
+            () -> shooterMotor.useShooter(0),
+            shooterMotor)
     );
     
 

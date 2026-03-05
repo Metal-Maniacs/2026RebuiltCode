@@ -72,11 +72,11 @@ public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
   private RobotContainer m_robotContainer;
 
-  public DigitalInput elevatorStopTop;
-  public DigitalInput elevatorStopBottom;
+  //public DigitalInput elevatorStopTop;
+  //public DigitalInput elevatorStopBottom;
 
-  boolean topLimitPressed;
-  boolean bottomLimitPressed;
+  //boolean topLimitPressed;
+  //boolean bottomLimitPressed;
 
   public Thread m_visionThread; // This creates a thread that runs parallel to other code.
   public CoreTalonFX m_shooterMotor;

@@ -1,6 +1,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.LimelightHelpers;
 import frc.robot.LimelightHelpers.PoseEstimate;
@@ -18,9 +19,14 @@ class Limelight extends SubsystemBase {
 
     PoseEstimate pEstimate = new PoseEstimate();
     Pose2d pose = new Pose2d();
+    private double poseX;
+    private double poseY;
+    private double poseZ;
+
+    private double yaw; // rotation in directions a compass would point to 
 
     public Limelight() {
-
+        LimelightHelpers.SetRobotOrientation(Constants.limelightName, yaw, 0, 0, 0, 0, 0);
     }
 
     public PoseEstimate getEstimate() { // Returns the most recent pose estimate
@@ -46,12 +52,12 @@ class Limelight extends SubsystemBase {
 
     @Override
     public void periodic() {
-        
+        update();
     }
 
     @Override
     public void simulationPeriodic() {
-        periodic();
+        //periodic();
         // This method will be called once per scheduler run during simulation
     }
 }
