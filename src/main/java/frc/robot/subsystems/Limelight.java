@@ -40,10 +40,8 @@ class Limelight extends SubsystemBase {
     public void update() { // Updates pose estimate
         PoseEstimate currentEstimate = LimelightHelpers.getBotPoseEstimate_wpiBlue(Constants.limelightName);
         // We want to rotate the percieved position of the robot, because our Limelight is on a rotating turret
-        // I hope your math classes are fun for you, because this will take some calculation
-        // We need to know the rotation of the shooter (using an encoder), and the relative location of the
-        // center of the robot (we can make a formula for this, possibly using trig)
-        currentEstimate.pose.rotateAround(new Translation2d(), new Rotation2d());
+        final double centerDist = 2.0; // The typical distance between the camera and the center of the bot
+        currentEstimate.pose.rotateAround(new Translation2d(centerDist, new Rotation2d(180)), new Rotation2d());
         if (currentEstimate != null && !isUpdateSus(currentEstimate)) {
             pEstimate = currentEstimate;
             pose = currentEstimate.pose;
