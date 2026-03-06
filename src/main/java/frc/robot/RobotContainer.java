@@ -217,7 +217,7 @@ public class RobotContainer {
 
      m_subsystemController.povRight().whileTrue(
         new StartEndCommand(
-            () -> shooterMotor.useShooter(-0.05),
+            () -> shooterMotor.useShooter(-0.1),
             () -> shooterMotor.useShooter(0), 
             shooterMotor)
     );
@@ -225,7 +225,7 @@ public class RobotContainer {
 
     m_subsystemController.povLeft().whileTrue(
         new StartEndCommand(
-            () -> shooterMotor.useShooter(0.05), 
+            () -> shooterMotor.useShooter(0.1), 
             () -> shooterMotor.useShooter(0),
             shooterMotor)
     );
