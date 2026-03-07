@@ -5,10 +5,7 @@
 
 package frc.robot;
 
-import com.ctre.phoenix6.hardware.TalonFX;
-
 import edu.wpi.first.math.MathUtil;
-import edu.wpi.first.wpilibj.DigitalInput;
 /*import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.controller.ProfiledPIDController;
 import edu.wpi.first.math.geometry.Pose2d;
@@ -18,16 +15,6 @@ import edu.wpi.first.math.trajectory.Trajectory;
 import edu.wpi.first.math.trajectory.TrajectoryConfig;
 import edu.wpi.first.math.trajectory.TrajectoryGenerator;*/
 import edu.wpi.first.wpilibj.XboxController;
-/*import edu.wpi.first.wpilibj.PS4Controller.Button;
-import frc.robot.Constants.AutoConstants;
-import frc.robot.Constants.DriveConstants;*/
-import frc.robot.Constants.OIConstants;
-import frc.robot.commands.AutoDriveForward;
-import frc.robot.commands.LeftAuto;
-import frc.robot.commands.RightAuto;
-//import frc.robot.commands.MiddleAuto;
-import frc.robot.subsystems.Shooter;
-import frc.robot.subsystems.DriveSubsystem;
 
 //import frc.robot.subsystems.Hopper;
 //import frc.robot.subsystems.Climb;
@@ -36,13 +23,19 @@ import edu.wpi.first.wpilibj2.command.Command;
 //import edu.wpi.first.wpilibj2.command.StartEndCommand;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.StartEndCommand;
-import edu.wpi.first.wpilibj2.command.InstantCommand;
 //import edu.wpi.first.wpilibj2.command.SwerveControllerCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 //import java.util.List;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
+/*import edu.wpi.first.wpilibj.PS4Controller.Button;
+import frc.robot.Constants.AutoConstants;
+import frc.robot.Constants.DriveConstants;*/
+import frc.robot.Constants.OIConstants;
+import frc.robot.commands.LeftAuto;
 import frc.robot.subsystems.DriveSubsystem;
+//import frc.robot.commands.MiddleAuto;
+import frc.robot.subsystems.Shooter;
 
 /*
  * This class is where the bulk of the robot should be declared.  Since Command-based is a
@@ -154,7 +147,7 @@ public class RobotContainer {
             () -> m_robotDrive.drive(
                 -MathUtil.applyDeadband(m_driverController.getLeftY(), OIConstants.kDriveDeadband),
                 -MathUtil.applyDeadband(m_driverController.getLeftX(), OIConstants.kDriveDeadband),
-                 -MathUtil.applyDeadband(m_driverController.getRightX(), OIConstants.kDriveDeadband),
+                -MathUtil.applyDeadband(m_driverController.getRightX(), OIConstants.kDriveDeadband),
                 true,
                 0.75),
             m_robotDrive)
@@ -197,12 +190,13 @@ public class RobotContainer {
             () -> climbmult = 1,
             m_climb)
     );
-
+    */
+    /*
     m_subsystemController.rightBumper().whileTrue(
         new StartEndCommand(
             () -> m_climb.useClimb(.5*climbmult), 
             () -> m_climb.useClimb(0), 
-            m_climb)
+            m_Hopper)
     );
 
 
@@ -210,11 +204,10 @@ public class RobotContainer {
         new StartEndCommand(
             () -> m_climb.useClimb(-.5*climbmult), 
             () -> m_climb.useClimb(0), 
-            m_climb)
+            m_Hopper)
     );
   }
 */
-
      m_subsystemController.povRight().whileTrue(
         new StartEndCommand(
             () -> shooterMotor.useShooter(-0.1),
