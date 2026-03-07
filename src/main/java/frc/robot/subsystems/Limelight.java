@@ -9,7 +9,7 @@ import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.geometry.Translation2d;
 import static edu.wpi.first.units.Units.Inches;
-import edu.wpi.first.units.Units;
+import edu.wpi.first.math.util.Units;
 import edu.wpi.first.units.measure.Distance;
 //import edu.wpi.first.units.measure.AngularVelocity;
 import frc.robot.Constants;
@@ -40,7 +40,7 @@ class Limelight extends SubsystemBase {
     public void update() { // Updates pose estimate
         PoseEstimate currentEstimate = LimelightHelpers.getBotPoseEstimate_wpiBlue(Constants.limelightName);
         // We want to rotate the percieved position of the robot, because our Limelight is on a rotating turret
-        final double centerDist = 2.0; // The typical distance between the camera and the center of the bot
+        final double centerDist = Units.inchesToMeters(2.0); // The typical distance between the camera and the center of the bot
         currentEstimate.pose.rotateAround(new Translation2d(centerDist, new Rotation2d(180)), new Rotation2d());
         if (currentEstimate != null && !isUpdateSus(currentEstimate)) {
             pEstimate = currentEstimate;
