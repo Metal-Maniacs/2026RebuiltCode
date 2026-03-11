@@ -16,7 +16,7 @@ import edu.wpi.first.math.trajectory.TrajectoryConfig;
 import edu.wpi.first.math.trajectory.TrajectoryGenerator;*/
 import edu.wpi.first.wpilibj.XboxController;
 
-//import frc.robot.subsystems.Hopper;
+import frc.robot.subsystems.Hopper;
 //import frc.robot.subsystems.Climb;
 
 import edu.wpi.first.wpilibj2.command.Command;
@@ -32,8 +32,9 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.Constants.AutoConstants;
 import frc.robot.Constants.DriveConstants;*/
 import frc.robot.Constants.OIConstants;
-import frc.robot.commands.LeftAuto;
+//import frc.robot.commands.LeftAuto;
 import frc.robot.subsystems.DriveSubsystem;
+import frc.robot.commands.AutoDriveForward;
 //import frc.robot.commands.MiddleAuto;
 import frc.robot.subsystems.Shooter;
 
@@ -48,7 +49,7 @@ public class RobotContainer {
  
   // The robot's subsystems
   final DriveSubsystem m_robotDrive = new DriveSubsystem();
- // public final Hopper m_Hopper = new Hopper();
+  public final Hopper m_Hopper = new Hopper();
   private final Shooter shooterMotor = new Shooter();
 
     //motor.setControl(new DutyCycleOut(1.0)); // 100% full speed positive.
@@ -119,26 +120,26 @@ public class RobotContainer {
    * {@link JoystickButton}.
    */
   private void configureButtonBindings() {
-    /* old event based xboxcontroller
-    new JoystickButton(m_driverController, Button.kR1.value)
+     //old event based xboxcontroller
+   /*  new JoystickButton(m_driverController, Button.kR1.value)
         .whileTrue(new RunCommand(
             () -> m_robotDrive.setX(),
-            m_robotDrive));
-    */
+            m_robotDrive));*/
+    
     //pass in swerve and multiplier
 
 
 
     
 
-    m_driverController.a().whileTrue(
+    m_driverController.x().whileTrue(
         new RunCommand(
             () -> m_robotDrive.drive(
                 -MathUtil.applyDeadband(m_driverController.getLeftY(), OIConstants.kDriveDeadband),
                 -MathUtil.applyDeadband(m_driverController.getLeftX(), OIConstants.kDriveDeadband),
                 -MathUtil.applyDeadband(m_driverController.getRightX(), OIConstants.kDriveDeadband),
                 true,
-                0.2),
+                0.25),
             m_robotDrive)
     );
 
@@ -149,7 +150,29 @@ public class RobotContainer {
                 -MathUtil.applyDeadband(m_driverController.getLeftX(), OIConstants.kDriveDeadband),
                 -MathUtil.applyDeadband(m_driverController.getRightX(), OIConstants.kDriveDeadband),
                 true,
-                0.75),
+                0.5),
+            m_robotDrive)
+    );
+
+      m_driverController.b().whileTrue(
+        new RunCommand(
+            () -> m_robotDrive.drive(
+                -MathUtil.applyDeadband(m_driverController.getLeftY(), OIConstants.kDriveDeadband),
+                -MathUtil.applyDeadband(m_driverController.getLeftX(), OIConstants.kDriveDeadband),
+                -MathUtil.applyDeadband(m_driverController.getRightX(), OIConstants.kDriveDeadband),
+                true,
+                0.5),
+            m_robotDrive)
+    );
+
+    m_driverController.a().whileTrue(
+        new RunCommand(
+            () -> m_robotDrive.drive(
+                -MathUtil.applyDeadband(m_driverController.getLeftY(), OIConstants.kDriveDeadband),
+                -MathUtil.applyDeadband(m_driverController.getLeftX(), OIConstants.kDriveDeadband),
+                -MathUtil.applyDeadband(m_driverController.getRightX(), OIConstants.kDriveDeadband),
+                true,
+                0.1),
             m_robotDrive)
     );
 
@@ -234,7 +257,6 @@ public class RobotContainer {
             () -> m_elevator.elevate(0), 
             m_elevator)
 
-//ow fuck
 //magic magic please work
 //i hate this
 //please work
@@ -304,10 +326,10 @@ public class RobotContainer {
     // Run path following command, then stop at the end.
     return swerveControllerCommand.andThen(() -> m_robotDrive.drive(0, 0, 0, false));
     */
-    return new LeftAuto(m_robotDrive, 15);
+    //return new LeftAuto(m_robotDrive, 15);
     //return new RightAuto(m_robotDrive, 15);
     //return new AutoDriveForward(m_robotDrive, 15);
     //return new MiddleAuto(m_robotDrive, 15);
-    //return null;
+    return null;
   }
 }

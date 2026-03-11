@@ -3,7 +3,26 @@
   "command": {
     "type": "sequential",
     "data": {
-      "commands": []
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Pose1"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Loop"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Loop"
+          }
+        }
+      ]
     }
   },
   "resetOdom": true,

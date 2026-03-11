@@ -19,11 +19,13 @@ import edu.wpi.first.wpilibj.ADIS16470_IMU;
 import edu.wpi.first.wpilibj.ADIS16470_IMU.IMUAxis;
 import frc.robot.Constants.DriveConstants;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-//import com.pathplanner.lib.auto.AutoBuilder;
+import com.pathplanner.lib.auto.AutoBuilder;
 //import com.pathplanner.lib.commands;
-//import com.pathplanner.lib.util.HolonomicPathFollowerConfig;
-//import com.pathplanner.lib.util.PIDConstants;
-//import com.pathplanner.lib.util.ReplanningConfig;
+//import com.pathplanner.lib.auto.AutoBuilder;
+import com.pathplanner.lib.config.PIDConstants;
+import com.pathplanner.lib.config.RobotConfig;
+import com.pathplanner.lib.controllers.PPHolonomicDriveController;
+import com.pathplanner.lib.path.PathPlannerPath;
 
 public class DriveSubsystem extends SubsystemBase {
   // Create MAXSwerveModules
@@ -91,7 +93,7 @@ public class DriveSubsystem extends SubsystemBase {
     
     // Load the RobotConfig from the GUI settings. You should probably
     // store this in your Constants file
-   /*  RobotConfig config;
+    /*RobotConfig config;
     try{
       config = RobotConfig.fromGUISettings();
     } catch (Exception e) {
@@ -101,7 +103,7 @@ public class DriveSubsystem extends SubsystemBase {
 
     
     // Configure AutoBuilder last
-   /*  AutoBuilder.configure(
+     /*AutoBuilder.configure(
             this::getPose, // Robot pose supplier
             this::resetPose, // Method to reset odometry (will be called if your auto has a starting pose)
             this::getRobotRelativeSpeeds, // ChassisSpeeds supplier. MUST BE ROBOT RELATIVE

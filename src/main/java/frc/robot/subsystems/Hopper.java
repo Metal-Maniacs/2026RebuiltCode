@@ -19,10 +19,15 @@ public class Hopper extends SubsystemBase {
   double HopperMultRight = 1;
   double HopperMultLeft = 1;
 
+  double ExtendMultRight = 1;
+  double ExtendMultLeft = 1;
+
   private SparkMax m_HopperMotor;
+  private SparkMax m_HopperExtendMotor;
 
   public Hopper() {
     m_HopperMotor = new SparkMax(DriveConstants.kHopperCanId, MotorType.kBrushed);
+    m_HopperExtendMotor = new SparkMax(DriveConstants.kExtendHopperCanId, MotorType.kBrushed);
   }
 
   public void disableRight() {
