@@ -27,9 +27,10 @@ import com.pathplanner.lib.config.RobotConfig;
 import com.pathplanner.lib.controllers.PPHolonomicDriveController;
 import com.pathplanner.lib.path.PathPlannerPath;
 
+@SuppressWarnings("unused")
 public class DriveSubsystem extends SubsystemBase {
   // Create MAXSwerveModules
-   public Encoder eFrontRight = new Encoder(0, 1, false, Encoder.EncodingType.k4X); // PLACEHOLDER DIO PINS -- PLEASE CHANGE :P
+  public Encoder eFrontRight = new Encoder(0, 1, false, Encoder.EncodingType.k4X); // PLACEHOLDER DIO PINS -- PLEASE CHANGE :P
   public Encoder eFrontLeft = new Encoder(2, 3, false, Encoder.EncodingType.k4X);
   public Encoder eBackRight = new Encoder(4, 5, false, Encoder.EncodingType.k4X);
   public Encoder eBackLeft = new Encoder(6, 7, false, Encoder.EncodingType.k4X);
