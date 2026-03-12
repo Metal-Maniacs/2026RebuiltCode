@@ -70,6 +70,7 @@ public final class Constants {
 
     // Shooter
     public static final int SHOOTER_CAN_ID = 0;
+    public static final int SHOOTER_AIM_CAN_ID = 0xff;
 
     //public static final int kShooterCanId = 12;
     

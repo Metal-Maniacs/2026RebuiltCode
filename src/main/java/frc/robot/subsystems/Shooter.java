@@ -53,18 +53,26 @@ public class Shooter extends SubsystemBase {
   double previousDegree;
   double shooterDegree;
 
-  //Christinas Code
   private final TalonFX shooterMotor;
+  private final SparkMax angleMotor;
+  private PIDController anglePID;
   
   //creates a new shooter
   public Shooter() {
   
   //=============Constructors===========
     shooterMotor = new TalonFX(DriveConstants.SHOOTER_CAN_ID);
-  
+    angleMotor = new SparkMax(DriveConstants.SHOOTER_AIM_CAN_ID, MotorType.kBrushless);
+    anglePID = new PIDController(0.0015, 0.001, 0);
   }
   public void useShooter(double shooterSpeed) {
     shooterMotor.set(shooterSpeed);
+  }
+
+  public void setShooterAngle(double angleRadians) {
+    double PIDoutput = anglePID.calculate(angleRadians);
+    double PIDerror = anglePID.getError();
+    angleMotor.set(PIDerror); // YARRR I DONT KNOW IF SHE WORKS BUT ITS A darn GOOD IDEA
   }
   
   @Override
