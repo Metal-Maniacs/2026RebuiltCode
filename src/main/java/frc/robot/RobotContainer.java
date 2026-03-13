@@ -214,23 +214,26 @@ public class RobotContainer {
             m_climb)
     );
     */
-    /*
+    
+    // Hopper extension control
+    // Might need to be modified
+
     m_subsystemController.rightBumper().whileTrue(
         new StartEndCommand(
-            () -> m_climb.useClimb(.5*climbmult), 
-            () -> m_climb.useClimb(0), 
+            () -> m_Hopper.extendIn(.5), 
+            () -> m_Hopper.extendIn(0), 
             m_Hopper)
     );
 
 
   m_subsystemController.leftBumper().whileTrue(   
         new StartEndCommand(
-            () -> m_climb.useClimb(-.5*climbmult), 
-            () -> m_climb.useClimb(0), 
+            () -> m_Hopper.extendOut(-.5), 
+            () -> m_Hopper.extendOut(0), 
             m_Hopper)
     );
   }
-*/
+  /*
      m_subsystemController.povRight().whileTrue(
         new StartEndCommand(
             () -> shooterMotor.useShooter(-0.1),
@@ -245,6 +248,7 @@ public class RobotContainer {
             () -> shooterMotor.useShooter(0),
             shooterMotor)
     );
+    */
     
 
 //i wanna cry
@@ -278,7 +282,7 @@ public class RobotContainer {
 
 
 
-  }
+  //}
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.

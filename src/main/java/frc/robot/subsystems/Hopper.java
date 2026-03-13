@@ -46,6 +46,22 @@ public class Hopper extends SubsystemBase {
     HopperMultLeft = 1;
   }
 
+  public void disableRightExtend() {
+    ExtendMultRight = 0;
+  }
+
+  public void enableRightExtend() {
+    ExtendMultRight = 1;
+  }
+
+  public void disableLeftExtend() {
+    ExtendMultLeft = 0;
+  }
+
+  public void enableLeftExtend() {
+    ExtendMultLeft = 1;
+  }
+
 
   /*
    * public void elevate(double speed){
@@ -59,6 +75,14 @@ public class Hopper extends SubsystemBase {
 
   public void moveLeft(double hopperSpeed) {
     m_HopperMotor.set(hopperSpeed * HopperMultLeft);
+  }
+
+  public void extendIn(double extendSpeed) {
+    m_HopperMotor.set(extendSpeed * ExtendMultRight);
+  }
+
+  public void extendOut(double extendSpeed) {
+    m_HopperMotor.set(extendSpeed * ExtendMultLeft);
   }
 
   @Override
