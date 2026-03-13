@@ -36,7 +36,6 @@ import com.revrobotics.spark.SparkMax;
 import com.revrobotics.spark.SparkRelativeEncoder;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 
-
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
  * each mode, as described in the TimedRobot documentation. If you change the name of this class or
@@ -46,8 +45,8 @@ import com.revrobotics.spark.SparkLowLevel.MotorType;
 @SuppressWarnings("unused")
 public class Robot extends TimedRobot {
   
- /** new code    
-  * private static final int deviceID=0;
+ /*
+  private static final int deviceID=0;
   private SparkMax m_motor;
   private SparkClosedLoopController m_ClosedLoopController;
   public double kP, kI, kD, Kiz, kMaxOutput, MinOutput;
@@ -60,7 +59,6 @@ public class Robot extends TimedRobot {
    */
   //private RelativeEncoder m_encoder; 
  
-
     //Original code below
 
   CommandXboxController controller;
@@ -101,8 +99,6 @@ public class Robot extends TimedRobot {
    //driveCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
     //clawCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
     //elevatorCam.setConnectionStrategy(ConnectionStrategy.kKeepOpen);
-
-  
   }
 
   /**
@@ -111,11 +107,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
-
-
-
-
-    /*new code
+    /*
     // initialize SPARK MAX with CAN ID
     m_motor = new SparkMax(deviceID, MotorType.kBrushed);
     m_encoder = m_motor.getEncoder(SparkRelativeEncoder.Type.kQuadrature, 4096);
@@ -261,9 +253,6 @@ public class Robot extends TimedRobot {
       }
     }
       */
-
-  
-
   @Override
   public void testInit() {
     // Cancels all running commands at the start of test mode.

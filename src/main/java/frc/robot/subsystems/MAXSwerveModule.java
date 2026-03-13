@@ -29,7 +29,7 @@ public class MAXSwerveModule {
   private final SparkClosedLoopController m_drivingClosedLoopController;
   private final SparkClosedLoopController m_turningClosedLoopController;
 
-  private double m_chassisAngularOffset = 0.0 + Math.PI;
+  private double m_chassisAngularOffset = Math.PI;
 // added PI to make the motors hopefully turn normally
 
   private SwerveModuleState m_desiredState = new SwerveModuleState(0.0, new Rotation2d());

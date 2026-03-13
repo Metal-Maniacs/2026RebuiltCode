@@ -109,7 +109,6 @@ public class RobotContainer {
                 m_robotDrive));
     }
 
-
   /**
    * Use this method to define your button->command mappings. Buttons can be
    * created by
@@ -126,11 +125,7 @@ public class RobotContainer {
             () -> m_robotDrive.setX(),
             m_robotDrive));*/
     
-    //pass in swerve and multiplier
-
-
-
-    
+    //pass in swerve and multiplier    
 
     m_driverController.x().whileTrue(
         new RunCommand(
@@ -214,7 +209,6 @@ public class RobotContainer {
             m_climb)
     );
     */
-    
     // Hopper extension control
     // Might need to be modified
 
@@ -249,7 +243,6 @@ public class RobotContainer {
             shooterMotor)
     );
     */
-    
 
 //i wanna cry
      
@@ -275,13 +268,6 @@ public class RobotContainer {
             m_elevator)
     );
 */    
-
-
-
-
-
-
-
   //}
 
   /**
