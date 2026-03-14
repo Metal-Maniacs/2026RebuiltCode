@@ -17,8 +17,8 @@ import frc.robot.Constants;
 @SuppressWarnings("unused")
 class Limelight extends SubsystemBase {
 
-    PoseEstimate pEstimate = new PoseEstimate();
-    Pose2d pose = new Pose2d();
+    private PoseEstimate pEstimate = new PoseEstimate();
+    private Pose2d pose = new Pose2d();
     private double poseX;
     private double poseY;
     private double poseZ;

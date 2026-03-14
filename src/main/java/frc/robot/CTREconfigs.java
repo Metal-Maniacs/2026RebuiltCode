@@ -13,8 +13,6 @@ import com.ctre.phoenix6.signals.NeutralModeValue;
 @SuppressWarnings("unused")
 public final class CTREconfigs {
 
-  
-
  // var talonFXConfigs = new TalonFXConfiguration();
 
     //public TalonFXConfiguration swerveAngleFXConfig = new TalonFXConfiguration();

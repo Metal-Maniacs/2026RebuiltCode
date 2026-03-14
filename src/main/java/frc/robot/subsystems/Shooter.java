@@ -32,7 +32,6 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 public class Shooter extends SubsystemBase {
 
   //================Defining==============
-  //TalonFX Motor;     //Kraken provids all the power/force
 
   SparkMax rotationMotor; //Neo 1.1 rotates the base of turret
   SparkMax archMotor;     //Neo 550 comed out to controll the arch the balls follow

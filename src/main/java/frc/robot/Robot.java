@@ -76,7 +76,6 @@ public class Robot extends TimedRobot {
   //boolean topLimitPressed;
   //boolean bottomLimitPressed;
 
-  public Thread m_visionThread; // This creates a thread that runs parallel to other code.
   public CoreTalonFX m_shooterMotor;
 
   /** Called once at the beginning of the robot program. */

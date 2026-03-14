@@ -21,7 +21,6 @@ public class LeftAuto extends Command {
   private double timeToRun;
   private double initTime;
 
-
   public LeftAuto(DriveSubsystem mainDriveSubsystem, double time) {
     
     timeToRun = time;
