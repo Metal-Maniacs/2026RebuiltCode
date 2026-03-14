@@ -37,6 +37,7 @@ import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.commands.AutoDriveForward;
 //import frc.robot.commands.MiddleAuto;
 import frc.robot.subsystems.Shooter;
+import frc.robot.subsystems.Climb;
 
 /*
  * This class is where the bulk of the robot should be declared.  Since Command-based is a
@@ -51,12 +52,10 @@ public class RobotContainer {
   final DriveSubsystem m_robotDrive = new DriveSubsystem();
   public final Hopper m_Hopper = new Hopper();
   private final Shooter shooterMotor = new Shooter();
+  private final Shooter shooterAim = new Shooter();
+  private final Climb m_climb = new Climb();
 
-    //motor.setControl(new DutyCycleOut(1.0)); // 100% full speed positive.
-
-  //private final Climb m_climb = new Climb();
-
-   //DigitalInput elevatorStop;
+ 
   private double climbmult = 1;
 
   // The driver's controller
@@ -67,24 +66,8 @@ public class RobotContainer {
   // Controller Buttons
   Trigger xButton = m_driverController.x();
 
-// double elevateSpeedTop = -.75;
- //double elevateSpeedBottom = .75;
-
+//
  
- /* public void disableElevatorUp(){
-    elevateSpeedTop = 0;
-  }
-  public void enableElevatorUp(){
-    elevateSpeedTop = -.75;
-  }
-
-  public void disableElevatorDown(){
-    elevateSpeedBottom = 0;
-  }
-  public void enableElevatorDown(){
-    elevateSpeedBottom = .75;
-  }*/
-
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
    */
@@ -92,7 +75,7 @@ public class RobotContainer {
     // Configure the button bindings
     configureButtonBindings();
 
-    //elevatorStop = new DigitalInput(0);
+  
 
     // Configure default commands
 
@@ -171,14 +154,7 @@ public class RobotContainer {
             m_robotDrive)
     );
 
-    //Subsystems
-   /*  elevatorStop.get().whileTrue(
-        new StartEndCommand(
-            () -> m_robotDrive.drive(1,0, 0, false, .16),
-            () -> m_robotDrive.drive(1,0, 0, false, .0),
-            m_robotDrive)
-    );       
-*/
+ 
 
     m_driverController.rightTrigger().whileTrue(
         new StartEndCommand(
@@ -187,34 +163,30 @@ public class RobotContainer {
             m_robotDrive)
     );
 
-  
-    /*m_subsystemController.x().whileTrue(
+// CLIMB works i think
+
+   m_subsystemController.a().whileTrue(
         new StartEndCommand(
-            () -> climbmult = 2, 
-            () -> climbmult = 1,
+            () -> m_climb.useClimb(.1), 
+            () -> m_climb.useClimb(0), 
             m_climb)
     );
 
-    m_subsystemController.y().whileTrue(
+m_subsystemController.b().whileTrue(
         new StartEndCommand(
-            () -> climbmult = 1.5, 
-            () -> climbmult = 1,
+            () -> m_climb.useClimb(-.1), 
+            () -> m_climb.useClimb(0), 
             m_climb)
     );
 
-    m_subsystemController.b().whileTrue(
-        new StartEndCommand(
-            () -> climbmult = .5, 
-            () -> climbmult = 1,
-            m_climb)
-    );
-    */
+    
     // Hopper extension control
     // Might need to be modified
+    //changed half power to quarter pwr because testing
 
     m_subsystemController.rightBumper().whileTrue(
         new StartEndCommand(
-            () -> m_Hopper.extendIn(.5), 
+            () -> m_Hopper.extendIn(.25), 
             () -> m_Hopper.extendIn(0), 
             m_Hopper)
     );
@@ -222,52 +194,56 @@ public class RobotContainer {
 
   m_subsystemController.leftBumper().whileTrue(   
         new StartEndCommand(
-            () -> m_Hopper.extendOut(-.5), 
+            () -> m_Hopper.extendOut(-.25), 
             () -> m_Hopper.extendOut(0), 
             m_Hopper)
     );
-  }
-  /*
+  
+  
      m_subsystemController.povRight().whileTrue(
         new StartEndCommand(
             () -> shooterMotor.useShooter(-0.1),
             () -> shooterMotor.useShooter(0), 
             shooterMotor)
     );
-            //motor.setControl(new DutyCycleOut(1.0))
-
+         
     m_subsystemController.povLeft().whileTrue(
         new StartEndCommand(
             () -> shooterMotor.useShooter(0.1), 
             () -> shooterMotor.useShooter(0),
             shooterMotor)
     );
-    */
 
+//shooter aim 
+//it works i think? hopefully
+    
+m_subsystemController.povUp().whileTrue(
+        new StartEndCommand(
+            () -> shooterAim.useShooterAim(0.1), 
+            () -> shooterAim.useShooterAim(0),
+            shooterAim)
+    );
+
+m_subsystemController.povDown().whileTrue(
+        new StartEndCommand(
+            () -> shooterAim.useShooterAim(0.1), 
+            () -> shooterAim.useShooterAim(0),
+            shooterAim)
+    );
+
+
+
+
+  }
 //i wanna cry
      
- /*  
-    m_subsystemController.povUp().whileTrue(
-
-        new StartEndCommand(
-            () -> m_elevator.elevate(elevateSpeedTop), 
-            () -> m_elevator.elevate(0), 
-            m_elevator)
-
+ 
 //magic magic please work
 //i hate this
 //please work
 //move signal light
 
-    );
-    m_subsystemController.povDown().whileTrue(
-
-        new StartEndCommand(
-            () -> m_elevator.elevate(elevateSpeedBottom), 
-            () -> m_elevator.elevate(0), 
-            m_elevator)
-    );
-*/    
+ 
   //}
 
   /**

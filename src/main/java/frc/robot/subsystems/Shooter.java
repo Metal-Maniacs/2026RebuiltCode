@@ -68,6 +68,12 @@ public class Shooter extends SubsystemBase {
     shooterMotor.set(shooterSpeed);
   }
 
+// ShooterAim  can be used i think?
+
+ public void useShooterAim(double shooterAimSpeed) {
+    angleMotor.set(shooterAimSpeed);
+  }
+
   public void setShooterAngle(double angleRadians) {
     double PIDoutput = anglePID.calculate(angleRadians);
     double PIDerror = anglePID.getError();
