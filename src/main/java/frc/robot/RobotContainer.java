@@ -52,7 +52,7 @@ public class RobotContainer {
   final DriveSubsystem m_robotDrive = new DriveSubsystem();
   public final Hopper m_Hopper = new Hopper();
   private final Shooter shooterMotor = new Shooter();
-  private final Shooter shooterAim = new Shooter();
+  private final Shooter shooterArchMotor = new Shooter();
   private final Climb m_climb = new Climb();
 
  
@@ -110,6 +110,7 @@ public class RobotContainer {
     
     //pass in swerve and multiplier    
 
+    //DRIVER CONTROLLERS
     m_driverController.x().whileTrue(
         new RunCommand(
             () -> m_robotDrive.drive(
@@ -154,8 +155,6 @@ public class RobotContainer {
             m_robotDrive)
     );
 
- 
-
     m_driverController.rightTrigger().whileTrue(
         new StartEndCommand(
             () -> m_robotDrive.setX(), 
@@ -163,8 +162,9 @@ public class RobotContainer {
             m_robotDrive)
     );
 
-// CLIMB works i think
 
+//--------------------------SUBSYSTEM CONTROLLER!!!!!!!!!!!---------------------------
+// CLIMB works i think
    m_subsystemController.a().whileTrue(
         new StartEndCommand(
             () -> m_climb.useClimb(.1), 
@@ -177,8 +177,7 @@ m_subsystemController.b().whileTrue(
             () -> m_climb.useClimb(-.1), 
             () -> m_climb.useClimb(0), 
             m_climb)
-    );
-
+    ); 
     
     // Hopper extension control
     // Might need to be modified
@@ -199,17 +198,18 @@ m_subsystemController.b().whileTrue(
             m_Hopper)
     );
   
+  //WORKS AS A REGULAR SPARKMAX SHOOTER
   
-     m_subsystemController.povRight().whileTrue(
+      m_subsystemController.rightTrigger().whileTrue(
         new StartEndCommand(
-            () -> shooterMotor.useShooter(-0.1),
+            () -> shooterMotor.useShooter(0.1),
             () -> shooterMotor.useShooter(0), 
             shooterMotor)
     );
          
-    m_subsystemController.povLeft().whileTrue(
+    m_subsystemController.leftTrigger().whileTrue(
         new StartEndCommand(
-            () -> shooterMotor.useShooter(0.1), 
+            () -> shooterMotor.useShooter(-0.1), 
             () -> shooterMotor.useShooter(0),
             shooterMotor)
     );
@@ -219,16 +219,16 @@ m_subsystemController.b().whileTrue(
     
 m_subsystemController.povUp().whileTrue(
         new StartEndCommand(
-            () -> shooterAim.useShooterAim(0.1), 
-            () -> shooterAim.useShooterAim(0),
-            shooterAim)
+            () -> shooterArchMotor.useShooterArch(0.1), 
+            () -> shooterArchMotor.useShooterArch(0),
+            shooterArchMotor)
     );
 
 m_subsystemController.povDown().whileTrue(
         new StartEndCommand(
-            () -> shooterAim.useShooterAim(0.1), 
-            () -> shooterAim.useShooterAim(0),
-            shooterAim)
+            () -> shooterArchMotor.useShooterArch(-0.1), 
+            () -> shooterArchMotor.useShooterArch(0),
+            shooterArchMotor)  
     );
 
 

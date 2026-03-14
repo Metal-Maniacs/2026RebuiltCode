@@ -73,10 +73,12 @@ public final class Constants {
     public static final int kRollerHopperCanId = 10;
     public static final int kExtendHopperCanId = 11;
 
+    //HOPPER KRAKEN AHHHHHH
+    //public static final int talonrollerCanId = 0;
+
     // Shooter
     public static final int SHOOTER_CAN_ID = 0;
-    public static final int SHOOTER_AIM_CAN_ID = 0xff;
-
+   
     //public static final int kShooterCanId = 12;
     
     public static final int kSusanShooterCanId = 12;

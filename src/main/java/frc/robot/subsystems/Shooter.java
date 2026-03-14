@@ -52,17 +52,22 @@ public class Shooter extends SubsystemBase {
   double previousDegree;
   double shooterDegree;
 
-  private final TalonFX shooterMotor;
-  private final SparkMax angleMotor;
+ private final TalonFX shooterMotor;
+ // private final SparkMax shooterMotor;
+  private final SparkMax angleArchMotor;
   private PIDController anglePID;
-  
+  //changed name for the aim to arch because aim is actually arch 
+
   //creates a new shooter
   public Shooter() {
   
   //=============Constructors===========
     shooterMotor = new TalonFX(DriveConstants.SHOOTER_CAN_ID);
-    angleMotor = new SparkMax(DriveConstants.SHOOTER_AIM_CAN_ID, MotorType.kBrushless);
+   // shooterMotor = new SparkMax(DriveConstants.SHOOTER_CAN_ID, MotorType.kBrushless);
+    angleArchMotor = new SparkMax(DriveConstants.kArchShooterCanId, MotorType.kBrushless);
     anglePID = new PIDController(0.0015, 0.001, 0);
+    
+    //kArchShooterCanId
   }
   public void useShooter(double shooterSpeed) {
     shooterMotor.set(shooterSpeed);
@@ -70,14 +75,14 @@ public class Shooter extends SubsystemBase {
 
 // ShooterAim  can be used i think?
 
- public void useShooterAim(double shooterAimSpeed) {
-    angleMotor.set(shooterAimSpeed);
+ public void useShooterArch(double shooterArch) {
+    angleArchMotor.set(shooterArch);
   }
 
   public void setShooterAngle(double angleRadians) {
     double PIDoutput = anglePID.calculate(angleRadians);
     double PIDerror = anglePID.getError();
-    angleMotor.set(PIDerror); // YARRR I DONT KNOW IF SHE WORKS BUT ITS A darn GOOD IDEA
+    angleArchMotor.set(PIDerror); // YARRR I DONT KNOW IF SHE WORKS BUT ITS A darn GOOD IDEA
   }
   
   @Override

@@ -62,12 +62,7 @@ public class Hopper extends SubsystemBase {
     ExtendMultLeft = 1;
   }
 
-  /*
-   * public void elevate(double speed){
-   * m_elevatorMotor.set(speed);
-   * }
-   */
-
+ 
   public void moveRight(double hopperSpeed) {
     m_HopperMotor.set(hopperSpeed * HopperMultRight);
   }
