@@ -1,4 +1,20 @@
 
+
+NEW ONE (IMPORTANT)
+TO DO LIST
+    1. test the robot swerves
+    2. limelight to wrok in elastic
+    3. pathplanner get new auto path
+        a. doesnt have to be facy justa simple moving one would be okay
+        b. really cool if we shoot maybe (use time)
+    4. play around with elastic
+        a. add cool widgets
+
+
+
+
+
+old one
 TO DO LIST
     1. code the hopper
     2. extend it
