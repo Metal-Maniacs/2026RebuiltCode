@@ -52,7 +52,11 @@ public class RobotContainer {
   final DriveSubsystem m_robotDrive = new DriveSubsystem();
   public final Hopper m_Hopper = new Hopper();
   private final Shooter shooterMotor = new Shooter();
+  private final Shooter shooterSusanMotor = new Shooter();
   private final Shooter shooterArchMotor = new Shooter();
+  private final Hopper HopperExtend = new Hopper();
+  private final Hopper HopperDeExtend = new Hopper();
+  private final Hopper HopperRoller = new Hopper();
   private final Climb m_climb = new Climb();
 
  
@@ -164,6 +168,8 @@ public class RobotContainer {
 
 
 //--------------------------SUBSYSTEM CONTROLLER!!!!!!!!!!!---------------------------
+
+//================================CLIMB===============================
 // CLIMB works i think
    m_subsystemController.a().whileTrue(
         new StartEndCommand(
@@ -178,27 +184,50 @@ m_subsystemController.b().whileTrue(
             () -> m_climb.useClimb(0), 
             m_climb)
     ); 
+//============================================================================
     
+//=======================================HOPPER===============================
     // Hopper extension control
     // Might need to be modified
     //changed half power to quarter pwr because testing
 
+    // chnaged hopper to extend 
     m_subsystemController.rightBumper().whileTrue(
         new StartEndCommand(
-            () -> m_Hopper.extendIn(.25), 
-            () -> m_Hopper.extendIn(0), 
-            m_Hopper)
+            () -> HopperExtend.extend(.25), 
+            () -> HopperExtend.extend(0), 
+            HopperExtend)
     );
 
-
+// this helps deextend
   m_subsystemController.leftBumper().whileTrue(   
         new StartEndCommand(
-            () -> m_Hopper.extendOut(-.25), 
-            () -> m_Hopper.extendOut(0), 
+            () -> HopperDeExtend.deextend(-.25), 
+            () -> HopperDeExtend.deextend(0), 
+            HopperDeExtend)
+    );
+
+    // added roller cotrollers
+     m_subsystemController.y().whileTrue(   
+        new StartEndCommand(
+            () -> HopperRoller.rollers(-.25), 
+            () -> HopperRoller.rollers(0), 
+            HopperRoller)
+    );
+
+//intake fuel
+ m_subsystemController.x().whileTrue(   
+        new StartEndCommand(
+            () -> m_Hopper.intake(.25), 
+            () -> m_Hopper.intake(0), 
             m_Hopper)
     );
-  
-  //WORKS AS A REGULAR SPARKMAX SHOOTER
+
+ 
+
+ //==========================================================================
+
+//=========================WORKS AS A SHOOTER I THINK========================
   
       m_subsystemController.rightTrigger().whileTrue(
         new StartEndCommand(
@@ -231,6 +260,24 @@ m_subsystemController.povDown().whileTrue(
             shooterArchMotor)  
     );
 
+    // turns the base of the shooter
+    m_subsystemController.povRight().whileTrue(
+        new StartEndCommand(
+            () -> shooterSusanMotor.useShooterSusan(0.1), 
+            () -> shooterSusanMotor.useShooterSusan(0),
+            shooterSusanMotor)  
+    );
+
+ m_subsystemController.povLeft().whileTrue(
+        new StartEndCommand(
+            () -> shooterSusanMotor.useShooterSusan(-0.1), 
+            () -> shooterSusanMotor.useShooterSusan(0),
+            shooterSusanMotor)  
+    );
+
+
+
+//=============================================================================
 
 
 

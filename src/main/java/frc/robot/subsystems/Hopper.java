@@ -16,67 +16,36 @@ import frc.robot.Constants.DriveConstants;
 @SuppressWarnings("unused")
 public class Hopper extends SubsystemBase {
 
-  double HopperMultRight = 1;
-  double HopperMultLeft = 1;
+  // added contructs
+  private final SparkMax m_HopperMotor;
+  private final SparkMax m_HopperExtendMotor;
+  private final SparkMax m_HopperRollers;
 
-  double ExtendMultRight = 1;
-  double ExtendMultLeft = 1;
-
-  private SparkMax m_HopperMotor;
-  private SparkMax m_HopperExtendMotor;
-
+// all the id are added
   public Hopper() {
-    m_HopperMotor = new SparkMax(DriveConstants.kHopperCanId, MotorType.kBrushed);
-    m_HopperExtendMotor = new SparkMax(DriveConstants.kExtendHopperCanId, MotorType.kBrushed);
+    m_HopperMotor = new SparkMax(DriveConstants.kHopperCanId, MotorType.kBrushless);
+    m_HopperExtendMotor = new SparkMax(DriveConstants.kExtendHopperCanId, MotorType.kBrushless);
+     m_HopperRollers = new SparkMax(DriveConstants.kRollerHopperCanId, MotorType.kBrushless);
+
   }
 
-  public void disableRight() {
-    HopperMultRight = 0;
-  }
-
-  public void enableRight() {
-    HopperMultRight = 1;
-  }
-
-  public void disableLeft() {
-    HopperMultLeft = 0;
-  }
-
-  public void enableLeft() {
-    HopperMultLeft = 1;
-  }
-
-  public void disableRightExtend() {
-    ExtendMultRight = 0;
-  }
-
-  public void enableRightExtend() {
-    ExtendMultRight = 1;
-  }
-
-  public void disableLeftExtend() {
-    ExtendMultLeft = 0;
-  }
-
-  public void enableLeftExtend() {
-    ExtendMultLeft = 1;
-  }
-
+  // roll roll your fuel
+public void rollers(double rollerspeed) {
+m_HopperRollers.set(rollerspeed);
+}
  
-  public void moveRight(double hopperSpeed) {
-    m_HopperMotor.set(hopperSpeed * HopperMultRight);
+//for intake
+public void intake(double hopperspeed){
+  m_HopperMotor.set(hopperspeed);
+}
+
+// extemd and deextend fr the correct can id
+  public void extend(double extendSpeed) {
+    m_HopperExtendMotor.set(extendSpeed);
   }
 
-  public void moveLeft(double hopperSpeed) {
-    m_HopperMotor.set(hopperSpeed * HopperMultLeft);
-  }
-
-  public void extendIn(double extendSpeed) {
-    m_HopperMotor.set(extendSpeed * ExtendMultRight);
-  }
-
-  public void extendOut(double extendSpeed) {
-    m_HopperMotor.set(extendSpeed * ExtendMultLeft);
+    public void deextend(double deextendSpeed) {
+    m_HopperExtendMotor.set(deextendSpeed);
   }
 
   @Override

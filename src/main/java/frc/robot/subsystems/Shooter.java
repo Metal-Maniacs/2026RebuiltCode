@@ -52,9 +52,10 @@ public class Shooter extends SubsystemBase {
   double previousDegree;
   double shooterDegree;
 
- private final TalonFX shooterMotor;
- // private final SparkMax shooterMotor;
+  private final TalonFX shooterMotor;
   private final SparkMax angleArchMotor;
+  // added the base motor
+  private final SparkMax lazySusanMotor;
   private PIDController anglePID;
   //changed name for the aim to arch because aim is actually arch 
 
@@ -62,21 +63,25 @@ public class Shooter extends SubsystemBase {
   public Shooter() {
   
   //=============Constructors===========
+  // we done adding motor 
     shooterMotor = new TalonFX(DriveConstants.SHOOTER_CAN_ID);
-   // shooterMotor = new SparkMax(DriveConstants.SHOOTER_CAN_ID, MotorType.kBrushless);
     angleArchMotor = new SparkMax(DriveConstants.kArchShooterCanId, MotorType.kBrushless);
+    lazySusanMotor = new SparkMax(DriveConstants.kSusanShooterCanId, MotorType.kBrushless);
     anglePID = new PIDController(0.0015, 0.001, 0);
-    
-    //kArchShooterCanId
   }
+
   public void useShooter(double shooterSpeed) {
     shooterMotor.set(shooterSpeed);
   }
 
 // ShooterAim  can be used i think?
-
  public void useShooterArch(double shooterArch) {
     angleArchMotor.set(shooterArch);
+  }
+
+  // turns the base of shooter our lazy susuan
+  public void useShooterSusan(double shooterSusan) {
+    lazySusanMotor.set(shooterSusan);
   }
 
   public void setShooterAngle(double angleRadians) {

@@ -68,18 +68,15 @@ public final class Constants {
     
     // HOPPER SPARK MAX CAN ID
     public static final int kHopperCanId = 9;
+      // in and outtake
 
-    // HOPPER IN AND OUT SPARKMAX CAN ID 
+    // HOPPER  SPARKMAX CAN ID 
     public static final int kRollerHopperCanId = 10;
     public static final int kExtendHopperCanId = 11;
-
-    //HOPPER KRAKEN AHHHHHH
-    //public static final int talonrollerCanId = 0;
 
     // Shooter
     public static final int SHOOTER_CAN_ID = 0;
    
-    //public static final int kShooterCanId = 12;
     
     public static final int kSusanShooterCanId = 12;
     public static final int kArchShooterCanId = 13;
@@ -111,6 +108,9 @@ public final class Constants {
     public static final int kDriverControllerPort = 0;
     public static final int kSubsystemControllerPort = 1;
     public static final double kDriveDeadband = 0.1;
+
+    // added this to have the operator use the joysticks
+    public static final double kOperatorDeadband = 0.1;
   }
 
   public static final class AutoConstants {
