@@ -7,6 +7,93 @@ TO DO LIST
     5. PID for climb and shooteraim
     
 
+ERROR  1  Could not find an ADIS16470; got product ID 0  edu.wpi.first.wpilibj.ADIS16470_IMU.switchToStandardSPI(ADIS16470_IMU.java:488) 
+
+   	at frc.robot.Main.main(Main.java:25)  	
+    at edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:527)  	
+    at edu.wpi.first.wpilibj.RobotBase.runRobot(RobotBase.java:436)  	
+    at edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:126)  	
+    at frc.robot.Robot.robotInit(Robot.java:126)  	
+    at frc.robot.RobotContainer.<init>(RobotContainer.java:52)  	
+    at frc.robot.subsystems.DriveSubsystem.<init>(DriveSubsystem.java:55)  	
+    at frc.robot.subsystems.MAXSwerveModule.<init>(MAXSwerveModule.java:46)  	
+    at com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80)  
+    Warning at com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80): 
+    CANSparkMax object created for CAN ID 8, 
+    which is not a SPARK MAX. Some functionalities may not work. 
+
+    ﻿12:30:26.700 PM
+ Finished cleaning up after the IMU driver.  
+ Error at edu.wpi.first.wpilibj.ADIS16470_IMU.switchToStandardSPI(ADIS16470_IMU.java:488): 
+ Could not find an ADIS16470; got product ID 0 
+
+﻿12:30:24.463 PM
+   	at frc.robot.Main.main(Main.java:25)  	
+    at edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:527)  	
+    at edu.wpi.first.wpilibj.RobotBase.runRobot(RobotBase.java:436)  	
+    at edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:126)  	
+    at frc.robot.Robot.robotInit(Robot.java:126)  	
+    at frc.robot.RobotContainer.<init>(RobotContainer.java:52)  	
+    at frc.robot.subsystems.DriveSubsystem.<init>(DriveSubsystem.java:40)  	
+    at frc.robot.subsystems.MAXSwerveModule.<init>(MAXSwerveModule.java:46)  	
+    at com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80)  
+    Warning at com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80): 
+    CANSparkMax object created for CAN ID 5, which is not a SPARK MAX. 
+    Some functionalities may not work. 
+    Warning  1  CANSparkMax object created for CAN ID 5, which is not a SPARK MAX. 
+    Some functionalities may not work.  
+    com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80) 
+
+	at frc.robot.Main.main(Main.java:25)  	
+    at edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:527)  	
+    at edu.wpi.first.wpilibj.RobotBase.runRobot(RobotBase.java:436)  	
+    at edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:126)  	
+    at frc.robot.Robot.robotInit(Robot.java:126)  	
+    at frc.robot.RobotContainer.<init>(RobotContainer.java:52)  	
+    at frc.robot.subsystems.DriveSubsystem.<init>(DriveSubsystem.java:45)  	
+    at frc.robot.subsystems.MAXSwerveModule.<init>(MAXSwerveModule.java:46)  	
+    at com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80)  
+    Warning at com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80): 
+    CANSparkMax object created for CAN ID 6, which is not a SPARK MAX. 
+    Some functionalities may not work. 
+
+
+
+
+12:30:24.981 PM
+Warning  1  CANSparkMax object created for CAN ID 6, 
+which is not a SPARK MAX. Some functionalities may not work.  
+com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80) 
+
+﻿12:30:24.463 PM
+   	at frc.robot.Main.main(Main.java:25)  	
+    at edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:527)  	
+    at edu.wpi.first.wpilibj.RobotBase.runRobot(RobotBase.java:436)  	
+    at edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:126)  	
+    at frc.robot.Robot.robotInit(Robot.java:126)  	
+    at frc.robot.RobotContainer.<init>(RobotContainer.java:52)  	
+    at frc.robot.subsystems.DriveSubsystem.<init>(DriveSubsystem.java:40)  	
+    at frc.robot.subsystems.MAXSwerveModule.<init>(MAXSwerveModule.java:46)  	
+    at com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80)  
+    Warning at com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80): 
+    CANSparkMax object created for CAN ID 5, which is not a SPARK MAX. 
+    Some functionalities may not work. 
+    Warning  1  CANSparkMax object created for CAN ID 5, which is not a SPARK MAX. 
+    Some functionalities may not work.  
+    com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80) 
+
+
+﻿12:30:25.459 PM
+Warning  1  CANSparkMax object created for CAN ID 7, 
+which is not a SPARK MAX. Some functionalities may not work.  
+com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80) 
+
+﻿12:30:25.901 PM
+Warning  1  CANSparkMax object created for CAN ID 8, 
+which is not a SPARK MAX. Some functionalities may not work.  
+com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80) 
+
+
 
 
 67

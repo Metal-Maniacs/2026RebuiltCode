@@ -9,6 +9,8 @@ import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 
 import com.revrobotics.spark.SparkClosedLoopController;
+import com.revrobotics.spark.SparkFlex;
+import com.revrobotics.spark.SparkLowLevel;
 import com.revrobotics.spark.SparkMax;
 import com.revrobotics.spark.SparkBase.ControlType;
 import com.revrobotics.PersistMode;
@@ -20,7 +22,9 @@ import com.revrobotics.RelativeEncoder;
 import frc.robot.Configs;
 
 public class MAXSwerveModule {
-  private final SparkMax m_drivingSpark;
+
+  // driving id are now sparkflex
+  private final SparkFlex m_drivingSpark;
   private final SparkMax m_turningSpark;
 
   private final RelativeEncoder m_drivingEncoder;
@@ -29,8 +33,11 @@ public class MAXSwerveModule {
   private final SparkClosedLoopController m_drivingClosedLoopController;
   private final SparkClosedLoopController m_turningClosedLoopController;
 
+ // private double m_chassisAngularOffset = 0;
+// pervious value
+
   private double m_chassisAngularOffset = Math.PI;
-// added PI to make the motors hopefully turn normally
+// added PI to make the motors hopefully turn normally; i think it works
 
   private SwerveModuleState m_desiredState = new SwerveModuleState(0.0, new Rotation2d());
 
@@ -41,7 +48,8 @@ public class MAXSwerveModule {
    * Encoder.
    */
   public MAXSwerveModule(int drivingCANId, int turningCANId, double chassisAngularOffset) {
-    m_drivingSpark = new SparkMax(drivingCANId, MotorType.kBrushless);
+    // changed Diving id to sparkflex
+    m_drivingSpark = new SparkFlex(drivingCANId, SparkLowLevel.MotorType.kBrushless);
     m_turningSpark = new SparkMax(turningCANId, MotorType.kBrushless);
 
     m_drivingEncoder = m_drivingSpark.getEncoder();

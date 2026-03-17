@@ -58,6 +58,9 @@ public class DriveSubsystem extends SubsystemBase {
       DriveConstants.kBackRightChassisAngularOffset);
 
   // The gyro sensor
+ //Finished cleaning up after the IMU driver.  
+ //Error at edu.wpi.first.wpilibj.ADIS16470_IMU.switchToStandardSPI(ADIS16470_IMU.java:488): 
+ //Could not find an ADIS16470; got product ID 0 
   private final ADIS16470_IMU m_gyro = new ADIS16470_IMU();
 
   //can be used to reduce the speed of the motors
