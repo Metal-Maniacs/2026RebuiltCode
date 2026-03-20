@@ -19,20 +19,21 @@ public class Hopper extends SubsystemBase {
   // added contructs
   private final SparkMax m_HopperMotor;
   private final SparkMax m_HopperExtendMotor;
-  private final SparkMax m_HopperRollers;
+  //private final SparkMax m_HopperRollers;
 
 // all the id are added
   public Hopper() {
     m_HopperMotor = new SparkMax(DriveConstants.kHopperCanId, MotorType.kBrushless);
     m_HopperExtendMotor = new SparkMax(DriveConstants.kExtendHopperCanId, MotorType.kBrushless);
-     m_HopperRollers = new SparkMax(DriveConstants.kRollerHopperCanId, MotorType.kBrushless);
+    // no more rollers
+     //m_HopperRollers = new SparkMax(DriveConstants.kRollerHopperCanId, MotorType.kBrushless);
 
   }
 
   // roll roll your fuel
-public void rollers(double rollerspeed) {
+/*public void rollers(double rollerspeed) {
 m_HopperRollers.set(rollerspeed);
-}
+}*/
  
 //for intake
 public void intake(double hopperspeed){
@@ -40,7 +41,7 @@ public void intake(double hopperspeed){
 }
 
 // extemd and deextend fr the correct can id
-  public void extend(double extendSpeed) {
+    public void extend(double extendSpeed) {
     m_HopperExtendMotor.set(extendSpeed);
   }
 

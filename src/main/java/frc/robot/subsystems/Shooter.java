@@ -31,9 +31,12 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Shooter extends SubsystemBase {
 
+//----------------------took out all the code related to susan and arch---------------------------
+
+
   //================Defining==============
 
-  SparkMax rotationMotor; //Neo 1.1 rotates the base of turret
+  /*SparkMax rotationMotor; //Neo 1.1 rotates the base of turret
   SparkMax archMotor;     //Neo 550 comed out to controll the arch the balls follow
  
   CANcoder shooterPowerCancoder; 
@@ -41,22 +44,24 @@ public class Shooter extends SubsystemBase {
 
   PIDController powerMotorPID;
   PIDController rotationMotorPID;
-  PIDController archMotorPID;
+  PIDController archMotorPID;*/
   
+
+
   //the reference code has velocity voltage for a flywheel and digital imput for limit switches
   //here
 
-  static double CANRotatedDegrees = 0.0; //I have no clue where they got these numbers from
+  /*static double CANRotatedDegrees = 0.0; //I have no clue where they got these numbers from
   double currentDegree;
   double currentRotationPower;
   double previousDegree;
-  double shooterDegree;
+  double shooterDegree;*/
 
   private final TalonFX shooterMotor;
-  private final SparkMax angleArchMotor;
+  //private final SparkMax angleArchMotor;
   // added the base motor
-  private final SparkMax lazySusanMotor;
-  private PIDController anglePID;
+  //private final SparkMax lazySusanMotor;
+  //private PIDController anglePID;
   //changed name for the aim to arch because aim is actually arch 
 
   //creates a new shooter
@@ -65,30 +70,32 @@ public class Shooter extends SubsystemBase {
   //=============Constructors===========
   // we done adding motor 
     shooterMotor = new TalonFX(DriveConstants.SHOOTER_CAN_ID);
-    angleArchMotor = new SparkMax(DriveConstants.kArchShooterCanId, MotorType.kBrushless);
-    lazySusanMotor = new SparkMax(DriveConstants.kSusanShooterCanId, MotorType.kBrushless);
-    anglePID = new PIDController(0.0015, 0.001, 0);
+    //angleArchMotor = new SparkMax(DriveConstants.kArchShooterCanId, MotorType.kBrushless);
+    //lazySusanMotor = new SparkMax(DriveConstants.kSusanShooterCanId, MotorType.kBrushless);
+    //anglePID = new PIDController(0.0015, 0.001, 0);
   }
+
+
 
   public void useShooter(double shooterSpeed) {
     shooterMotor.set(shooterSpeed);
   }
 
 // ShooterAim  can be used i think?
- public void useShooterArch(double shooterArch) {
+ /*public void useShooterArch(double shooterArch) {
     angleArchMotor.set(shooterArch);
-  }
+  }*/
 
   // turns the base of shooter our lazy susuan
-  public void useShooterSusan(double shooterSusan) {
+  /*public void useShooterSusan(double shooterSusan) {
     lazySusanMotor.set(shooterSusan);
-  }
+  }*/
 
-  public void setShooterAngle(double angleRadians) {
+  /*  public void setShooterAngle(double angleRadians) {
     double PIDoutput = anglePID.calculate(angleRadians);
     double PIDerror = anglePID.getError();
     angleArchMotor.set(PIDerror); // YARRR I DONT KNOW IF SHE WORKS BUT ITS A darn GOOD IDEA
-  }
+  }*/
   
   @Override
   public void periodic() {

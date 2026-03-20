@@ -80,17 +80,18 @@ public class Robot extends TimedRobot {
 
   /** Called once at the beginning of the robot program. */
   public Robot() {
-  var Shooter_motor = new CoreTalonFX(0);
 
-  // talonfx
+var Shooter_motor = new CoreTalonFX(12);
+
+  // talonfx  
   var currentConfigs = new MotorOutputConfigs();
 
    // The left motor is CCW+
    currentConfigs.Inverted = InvertedValue.CounterClockwise_Positive;
-   Shooter_motor.getConfigurator().apply(currentConfigs);
+  Shooter_motor.getConfigurator().apply(currentConfigs);
 
-  
- //private RelativeEncoder m_encoder;
+  //4gtghbdgbgt66t66666tbv6
+ //private RelativeEncoder m_encoder; 
     //driveCam = CameraServer.startAutomaticCapture(0);
     //clawCam = CameraServer.startAutomaticCapture(0);
     //elevatorCam = CameraServer.startAutomaticCapture(2);

@@ -52,8 +52,8 @@ public class RobotContainer {
   final DriveSubsystem m_robotDrive = new DriveSubsystem();
   public final Hopper m_Hopper = new Hopper();
   private final Shooter shooterMotor = new Shooter();
-  private final Shooter shooterSusanMotor = new Shooter();
-  private final Shooter shooterArchMotor = new Shooter();
+ // private final Shooter shooterSusanMotor = new Shooter();
+ // private final Shooter shooterArchMotor = new Shooter();
   private final Hopper HopperExtend = new Hopper();
   private final Hopper HopperDeExtend = new Hopper();
   private final Hopper HopperRoller = new Hopper();
@@ -192,7 +192,7 @@ m_subsystemController.b().whileTrue(
     //changed half power to quarter pwr because testing
 
     // chnaged hopper to extend 
-    m_subsystemController.rightBumper().whileTrue(
+     m_subsystemController.rightBumper().whileTrue(
         new StartEndCommand(
             () -> HopperExtend.extend(.25), 
             () -> HopperExtend.extend(0), 
@@ -200,7 +200,7 @@ m_subsystemController.b().whileTrue(
     );
 
 // this helps deextend
-  m_subsystemController.leftBumper().whileTrue(   
+ m_subsystemController.leftBumper().whileTrue(   
         new StartEndCommand(
             () -> HopperDeExtend.deextend(-.25), 
             () -> HopperDeExtend.deextend(0), 
@@ -210,15 +210,15 @@ m_subsystemController.b().whileTrue(
     // added roller cotrollers
      m_subsystemController.y().whileTrue(   
         new StartEndCommand(
-            () -> HopperRoller.rollers(-.25), 
-            () -> HopperRoller.rollers(0), 
-            HopperRoller)
+           () -> m_Hopper.intake(.25), 
+            () -> m_Hopper.intake(0), 
+            m_Hopper)
     );
 
-//intake fuel
+//wahhh
  m_subsystemController.x().whileTrue(   
         new StartEndCommand(
-            () -> m_Hopper.intake(.25), 
+            () -> m_Hopper.intake(-.25), 
             () -> m_Hopper.intake(0), 
             m_Hopper)
     );
@@ -243,10 +243,12 @@ m_subsystemController.b().whileTrue(
             shooterMotor)
     );
 
+
+//----------------------------- took out the shooter code------------------------------------------
 //shooter aim 
 //it works i think? hopefully
     
-m_subsystemController.povUp().whileTrue(
+/*m_subsystemController.povUp().whileTrue(
         new StartEndCommand(
             () -> shooterArchMotor.useShooterArch(0.1), 
             () -> shooterArchMotor.useShooterArch(0),
@@ -258,10 +260,10 @@ m_subsystemController.povDown().whileTrue(
             () -> shooterArchMotor.useShooterArch(-0.1), 
             () -> shooterArchMotor.useShooterArch(0),
             shooterArchMotor)  
-    );
+    );*/
 
     // turns the base of the shooter
-    m_subsystemController.povRight().whileTrue(
+/*m_subsystemController.povRight().whileTrue(
         new StartEndCommand(
             () -> shooterSusanMotor.useShooterSusan(0.1), 
             () -> shooterSusanMotor.useShooterSusan(0),
@@ -273,7 +275,7 @@ m_subsystemController.povDown().whileTrue(
             () -> shooterSusanMotor.useShooterSusan(-0.1), 
             () -> shooterSusanMotor.useShooterSusan(0),
             shooterSusanMotor)  
-    );
+    );*/
 
 
 
