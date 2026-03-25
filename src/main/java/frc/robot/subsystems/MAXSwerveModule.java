@@ -33,10 +33,10 @@ public class MAXSwerveModule {
   private final SparkClosedLoopController m_drivingClosedLoopController;
   private final SparkClosedLoopController m_turningClosedLoopController;
 
- // private double m_chassisAngularOffset = 0;
+  private double m_chassisAngularOffset = 0;
 // pervious value
 
-  private double m_chassisAngularOffset = Math.PI;
+  //private double m_chassisAngularOffset = Math.PI;
 // added PI to make the motors hopefully turn normally; i think it works
 
   private SwerveModuleState m_desiredState = new SwerveModuleState(0.0, new Rotation2d());
@@ -61,11 +61,12 @@ public class MAXSwerveModule {
     // Apply the respective configurations to the SPARKS. Reset parameters before
     // applying the configuration to bring the SPARK to a known good state. Persist
     // the settings to the SPARK to avoid losing them on a power cycle.
+    
     m_drivingSpark.configure(Configs.MAXSwerveModule.drivingConfig, ResetMode.kResetSafeParameters,
         PersistMode.kPersistParameters);
     m_turningSpark.configure(Configs.MAXSwerveModule.turningConfig, ResetMode.kResetSafeParameters,
         PersistMode.kPersistParameters);
-
+    // m_turningSpark.configAccessor.
     m_chassisAngularOffset = chassisAngularOffset;
     m_desiredState.angle = new Rotation2d(m_turningEncoder.getPosition());
     m_drivingEncoder.setPosition(0);

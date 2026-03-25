@@ -1,0 +1,2175 @@
+[
+    {
+        "messageType": 2,
+        "timestamp": -0.0000762939453125,
+        "seqNumber": 102,
+        "line": "********** Robot program starting **********"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 0.02298736572265625,
+        "seqNumber": 103,
+        "line": "NT: Listening on NT3 port 1735, NT4 port 5810"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 0.44347381591796875,
+        "seqNumber": 104,
+        "line": "NT: Got a NT4 connection from 10.97.30.200 port 60169"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 0.44701385498046875,
+        "seqNumber": 105,
+        "line": "NT: CONNECTED NT4 client 'Elastic@1' (from 10.97.30.200:60169)"
+    },
+    {
+        "timestamp": 0.7671051025390625,
+        "seqNumber": 106,
+        "numOccur": 1,
+        "errorCode": 0,
+        "flags": 0,
+        "details": "StatusLogger: It is not recommended to log to RoboRIO internal storage. Plug in a flash drive.",
+        "location": "",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 0.7701873779296875,
+        "seqNumber": 107,
+        "line": "StatusLogger: Logging REVLOG to '/home/lvuser/logs/REV_TBD_4dddf07b6ac18d73.revlog'"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 0.7714309692382812,
+        "seqNumber": 108,
+        "line": "StatusLogger: Renamed REVLOG from 'REV_TBD_4dddf07b6ac18d73.revlog' to 'REV_20260321_185724.revlog' at '/home/lvuser/logs/REV_20260321_185724.revlog'"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 0.919525146484375,
+        "seqNumber": 109,
+        "line": "NT: Got a NT4 connection from 10.97.30.200 port 60186"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 0.921600341796875,
+        "seqNumber": 110,
+        "line": "NT: CONNECTED RTT client (from 10.97.30.200:60186)"
+    },
+    {
+        "timestamp": 3.3442611694335938,
+        "seqNumber": 111,
+        "numOccur": 1,
+        "errorCode": 0,
+        "flags": 0,
+        "details": "[phoenix] Library initialization is complete.",
+        "location": "",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "timestamp": 4.179176330566406,
+        "seqNumber": 112,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 1,
+        "details": "Could not find an ADIS16470; got product ID 0",
+        "location": "edu.wpi.first.wpilibj.ADIS16470_IMU.switchToStandardSPI(ADIS16470_IMU.java:488)",
+        "callStack": "",
+        "messageType": 0
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.179817199707031,
+        "seqNumber": 113,
+        "line": "Error at edu.wpi.first.wpilibj.ADIS16470_IMU.switchToStandardSPI(ADIS16470_IMU.java:488): Could not find an ADIS16470; got product ID 0"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.182167053222656,
+        "seqNumber": 114,
+        "line": "Finished cleaning up after the IMU driver."
+    },
+    {
+        "timestamp": 4.704750061035156,
+        "seqNumber": 115,
+        "numOccur": 1,
+        "errorCode": 2,
+        "flags": 1,
+        "details": "[Spark Max] IDs: 14, timed out while waiting for Period Status 0: HAL: CAN Receive has Timed Out",
+        "location": "",
+        "callStack": "",
+        "messageType": 0
+    },
+    {
+        "timestamp": 4.7053070068359375,
+        "seqNumber": 116,
+        "numOccur": 1,
+        "errorCode": 5,
+        "flags": 1,
+        "details": "[Spark Max] IDs: 14, Unable to retrieve SPARK firmware version. Please verify the deviceID field matches the configured CAN ID of the controller, and that the controller is connected to the CAN Bus. ",
+        "location": "",
+        "callStack": "",
+        "messageType": 0
+    },
+    {
+        "timestamp": 4.981781005859375,
+        "seqNumber": 117,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "CANSparkMax object created for CAN ID 14, which is not a SPARK MAX. Some functionalities may not work.",
+        "location": "com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80)",
+        "callStack": "\tat com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80)\n\tat frc.robot.subsystems.Climb.<init>(Climb.java:22)\n\tat frc.robot.RobotContainer.<init>(RobotContainer.java:60)\n\tat frc.robot.Robot.robotInit(Robot.java:127)\n\tat edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:126)\n\tat edu.wpi.first.wpilibj.RobotBase.runRobot(RobotBase.java:436)\n\tat edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:527)\n\tat frc.robot.Main.main(Main.java:54)\n",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.9823455810546875,
+        "seqNumber": 118,
+        "line": "Warning at com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80): CANSparkMax object created for CAN ID 14, which is not a SPARK MAX. Some functionalities may not work."
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.983123779296875,
+        "seqNumber": 119,
+        "line": "\tat com.revrobotics.spark.SparkMax.<init>(SparkMax.java:80)"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.9860687255859375,
+        "seqNumber": 120,
+        "line": "\tat frc.robot.subsystems.Climb.<init>(Climb.java:22)"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.986328125,
+        "seqNumber": 121,
+        "line": "\tat frc.robot.RobotContainer.<init>(RobotContainer.java:60)"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.986564636230469,
+        "seqNumber": 122,
+        "line": "\tat frc.robot.Robot.robotInit(Robot.java:127)"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.986824035644531,
+        "seqNumber": 123,
+        "line": "\tat edu.wpi.first.wpilibj.TimedRobot.startCompetition(TimedRobot.java:126)"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.987052917480469,
+        "seqNumber": 124,
+        "line": "\tat edu.wpi.first.wpilibj.RobotBase.runRobot(RobotBase.java:436)"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.987274169921875,
+        "seqNumber": 125,
+        "line": "\tat edu.wpi.first.wpilibj.RobotBase.startRobot(RobotBase.java:527)"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.987480163574219,
+        "seqNumber": 126,
+        "line": "\tat frc.robot.Main.main(Main.java:54)"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 4.9876556396484375,
+        "seqNumber": 127,
+        "line": ""
+    },
+    {
+        "timestamp": 5.078948974609375,
+        "seqNumber": 128,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.0794219970703125,
+        "seqNumber": 129,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.185768127441406,
+        "seqNumber": 130,
+        "line": "********** Robot program startup complete **********"
+    },
+    {
+        "timestamp": 5.236061096191406,
+        "seqNumber": 131,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Loop time of 0.02s overrun\n",
+        "location": "edu.wpi.first.wpilibj.IterativeRobotBase.printLoopOverrunMessage(IterativeRobotBase.java:436)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.2369842529296875,
+        "seqNumber": 132,
+        "line": "Warning at edu.wpi.first.wpilibj.IterativeRobotBase.printLoopOverrunMessage(IterativeRobotBase.java:436): Loop time of 0.02s overrun"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.2386322021484375,
+        "seqNumber": 133,
+        "line": ""
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.260749816894531,
+        "seqNumber": 134,
+        "line": "CommandScheduler loop overrun"
+    },
+    {
+        "timestamp": 5.400177001953125,
+        "seqNumber": 135,
+        "numOccur": 1,
+        "errorCode": 0,
+        "flags": 0,
+        "details": "[phoenix-diagnostics] Server 2026.1.2 (Mar 11 2026, 19:42:11) running on port: 1250",
+        "location": "",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "timestamp": 5.4466094970703125,
+        "seqNumber": 136,
+        "numOccur": 1,
+        "errorCode": 0,
+        "flags": 0,
+        "details": "[phoenix] Signal Logger Started (Network: rio)",
+        "location": "",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "timestamp": 5.549736022949219,
+        "seqNumber": 137,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "\tHopper.periodic(): 0.000167s\n\tbuttons.run(): 0.008273s\n\tShooter.periodic(): 0.000055s\n\tDriveSubsystem.periodic(): 0.059064s\n\tClimb.periodic(): 0.000835s\n",
+        "location": "edu.wpi.first.wpilibj.Tracer.lambda$printEpochs$0(Tracer.java:62)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.550331115722656,
+        "seqNumber": 138,
+        "line": "Warning at edu.wpi.first.wpilibj.Tracer.lambda$printEpochs$0(Tracer.java:62): \tHopper.periodic(): 0.000167s"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.552055358886719,
+        "seqNumber": 139,
+        "line": "\tbuttons.run(): 0.008273s"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.5523681640625,
+        "seqNumber": 140,
+        "line": "\tShooter.periodic(): 0.000055s"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.5526123046875,
+        "seqNumber": 141,
+        "line": "\tDriveSubsystem.periodic(): 0.059064s"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.5528411865234375,
+        "seqNumber": 142,
+        "line": "\tClimb.periodic(): 0.000835s"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.55303955078125,
+        "seqNumber": 143,
+        "line": ""
+    },
+    {
+        "timestamp": 5.5767822265625,
+        "seqNumber": 144,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "\tSmartDashboard.updateValues(): 0.010277s\n\tdisabledInit(): 0.002170s\n\trobotPeriodic(): 0.369738s\n\tLiveWindow.updateValues(): 0.000093s\n\tShuffleboard.update(): 0.000055s\n\tdisabledPeriodic(): 0.000464s\n",
+        "location": "edu.wpi.first.wpilibj.Tracer.lambda$printEpochs$0(Tracer.java:62)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.57720947265625,
+        "seqNumber": 145,
+        "line": "Warning at edu.wpi.first.wpilibj.Tracer.lambda$printEpochs$0(Tracer.java:62): \tSmartDashboard.updateValues(): 0.010277s"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.58013916015625,
+        "seqNumber": 146,
+        "line": "\tdisabledInit(): 0.002170s"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.580413818359375,
+        "seqNumber": 147,
+        "line": "\trobotPeriodic(): 0.369738s"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.5806121826171875,
+        "seqNumber": 148,
+        "line": "\tLiveWindow.updateValues(): 0.000093s"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.5807952880859375,
+        "seqNumber": 149,
+        "line": "\tShuffleboard.update(): 0.000055s"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.580986022949219,
+        "seqNumber": 150,
+        "line": "\tdisabledPeriodic(): 0.000464s"
+    },
+    {
+        "messageType": 2,
+        "timestamp": 5.581199645996094,
+        "seqNumber": 151,
+        "line": ""
+    },
+    {
+        "timestamp": 6.091789245605469,
+        "seqNumber": 152,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 6.0925140380859375,
+        "seqNumber": 153,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 6.712882995605469,
+        "seqNumber": 154,
+        "numOccur": 1,
+        "errorCode": 2,
+        "flags": 1,
+        "details": "[Spark Max] IDs: 14, timed out while waiting for Getting SPARK Model failed. Unable to account for device-specific behavior differences.\n",
+        "location": "",
+        "callStack": "",
+        "messageType": 0
+    },
+    {
+        "timestamp": 7.0914764404296875,
+        "seqNumber": 155,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 2 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 7.0920257568359375,
+        "seqNumber": 156,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 2 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 8.092056274414062,
+        "seqNumber": 157,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 8.092758178710938,
+        "seqNumber": 158,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 9.111152648925781,
+        "seqNumber": 159,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 9.112068176269531,
+        "seqNumber": 160,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 10.111213684082031,
+        "seqNumber": 161,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 10.112724304199219,
+        "seqNumber": 162,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 11.111228942871094,
+        "seqNumber": 163,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 11.111839294433594,
+        "seqNumber": 164,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 12.132881164550781,
+        "seqNumber": 165,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 12.133522033691406,
+        "seqNumber": 166,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 13.15106201171875,
+        "seqNumber": 167,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 13.151596069335938,
+        "seqNumber": 168,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 15.171119689941406,
+        "seqNumber": 169,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 15.171653747558594,
+        "seqNumber": 170,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 16.191818237304688,
+        "seqNumber": 171,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 16.192298889160156,
+        "seqNumber": 172,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 17.210861206054688,
+        "seqNumber": 173,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 17.211402893066406,
+        "seqNumber": 174,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 18.21086883544922,
+        "seqNumber": 175,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 18.211410522460938,
+        "seqNumber": 176,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 19.230865478515625,
+        "seqNumber": 177,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 19.23138427734375,
+        "seqNumber": 178,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 21.230850219726562,
+        "seqNumber": 179,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 21.23145294189453,
+        "seqNumber": 180,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 22.25122833251953,
+        "seqNumber": 181,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 22.2518310546875,
+        "seqNumber": 182,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 23.270950317382812,
+        "seqNumber": 183,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 23.271522521972656,
+        "seqNumber": 184,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 25.291419982910156,
+        "seqNumber": 185,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 25.291969299316406,
+        "seqNumber": 186,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 26.291282653808594,
+        "seqNumber": 187,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 26.29181671142578,
+        "seqNumber": 188,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 27.310821533203125,
+        "seqNumber": 189,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 27.311546325683594,
+        "seqNumber": 190,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 28.31098175048828,
+        "seqNumber": 191,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 28.31207275390625,
+        "seqNumber": 192,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 29.330703735351562,
+        "seqNumber": 193,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 29.331321716308594,
+        "seqNumber": 194,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 31.330848693847656,
+        "seqNumber": 195,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 31.331398010253906,
+        "seqNumber": 196,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 32.35076141357422,
+        "seqNumber": 197,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 32.351356506347656,
+        "seqNumber": 198,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 33.37097930908203,
+        "seqNumber": 199,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 33.371551513671875,
+        "seqNumber": 200,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 34.39054870605469,
+        "seqNumber": 201,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 34.39148712158203,
+        "seqNumber": 202,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 35.390586853027344,
+        "seqNumber": 203,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick axis 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 35.391212463378906,
+        "seqNumber": 204,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick axis 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 36.4105224609375,
+        "seqNumber": 205,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 36.41107177734375,
+        "seqNumber": 206,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 37.41093444824219,
+        "seqNumber": 207,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 37.41145324707031,
+        "seqNumber": 208,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 38.43043518066406,
+        "seqNumber": 209,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 38.43096923828125,
+        "seqNumber": 210,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 39.43049621582031,
+        "seqNumber": 211,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick axis 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 39.43103790283203,
+        "seqNumber": 212,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick axis 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 40.45057678222656,
+        "seqNumber": 213,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 40.451171875,
+        "seqNumber": 214,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 41.45045471191406,
+        "seqNumber": 215,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick axis 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 41.451019287109375,
+        "seqNumber": 216,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick axis 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 42.45086669921875,
+        "seqNumber": 217,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 42.4515380859375,
+        "seqNumber": 218,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 43.47045135498047,
+        "seqNumber": 219,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 43.471160888671875,
+        "seqNumber": 220,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 44.47057342529297,
+        "seqNumber": 221,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 44.47142791748047,
+        "seqNumber": 222,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 45.49053192138672,
+        "seqNumber": 223,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 45.49115753173828,
+        "seqNumber": 224,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 47.51048278808594,
+        "seqNumber": 225,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 47.51100158691406,
+        "seqNumber": 226,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 48.53041076660156,
+        "seqNumber": 227,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 48.53102111816406,
+        "seqNumber": 228,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 49.53105163574219,
+        "seqNumber": 229,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 2 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 49.531646728515625,
+        "seqNumber": 230,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 2 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 50.53053283691406,
+        "seqNumber": 231,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 1 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 50.53105163574219,
+        "seqNumber": 232,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 1 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 51.53047180175781,
+        "seqNumber": 233,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick axis 3 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 51.531005859375,
+        "seqNumber": 234,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick axis 3 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 52.53071594238281,
+        "seqNumber": 235,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 52.53129577636719,
+        "seqNumber": 236,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 53.53053283691406,
+        "seqNumber": 237,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 53.53114318847656,
+        "seqNumber": 238,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 54.55036926269531,
+        "seqNumber": 239,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 54.5509033203125,
+        "seqNumber": 240,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 55.57061767578125,
+        "seqNumber": 241,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 55.572174072265625,
+        "seqNumber": 242,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 56.590545654296875,
+        "seqNumber": 243,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 56.59112548828125,
+        "seqNumber": 244,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 58.59027099609375,
+        "seqNumber": 245,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 58.59095764160156,
+        "seqNumber": 246,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 59.59031677246094,
+        "seqNumber": 247,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 4 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 59.590850830078125,
+        "seqNumber": 248,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 4 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 60.59034729003906,
+        "seqNumber": 249,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 2 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 60.59083557128906,
+        "seqNumber": 250,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 2 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 61.590545654296875,
+        "seqNumber": 251,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 61.59126281738281,
+        "seqNumber": 252,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 62.610595703125,
+        "seqNumber": 253,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 62.611328125,
+        "seqNumber": 254,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 64.6102294921875,
+        "seqNumber": 255,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 4 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 64.61073303222656,
+        "seqNumber": 256,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 4 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 65.61026000976562,
+        "seqNumber": 257,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 1 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 65.61080932617188,
+        "seqNumber": 258,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 1 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 66.63124084472656,
+        "seqNumber": 259,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 66.63182067871094,
+        "seqNumber": 260,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 67.63020324707031,
+        "seqNumber": 261,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 2 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 67.63081359863281,
+        "seqNumber": 262,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 2 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 68.63031005859375,
+        "seqNumber": 263,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 2 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 68.630859375,
+        "seqNumber": 264,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 2 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 69.65034484863281,
+        "seqNumber": 265,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 69.65093994140625,
+        "seqNumber": 266,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 70.6702880859375,
+        "seqNumber": 267,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 70.67080688476562,
+        "seqNumber": 268,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 71.67030334472656,
+        "seqNumber": 269,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick axis 2 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 71.67082214355469,
+        "seqNumber": 270,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick axis 2 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 72.69056701660156,
+        "seqNumber": 271,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 72.69110107421875,
+        "seqNumber": 272,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 73.71017456054688,
+        "seqNumber": 273,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 73.71090698242188,
+        "seqNumber": 274,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 74.71015930175781,
+        "seqNumber": 275,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 2 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 74.71102905273438,
+        "seqNumber": 276,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 2 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 75.71017456054688,
+        "seqNumber": 277,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 2 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 75.71078491210938,
+        "seqNumber": 278,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 2 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 76.71017456054688,
+        "seqNumber": 279,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 76.71078491210938,
+        "seqNumber": 280,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 77.71051025390625,
+        "seqNumber": 281,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 77.71112060546875,
+        "seqNumber": 282,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 78.71026611328125,
+        "seqNumber": 283,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 2 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 78.71076965332031,
+        "seqNumber": 284,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 2 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 79.73025512695312,
+        "seqNumber": 285,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 79.73072814941406,
+        "seqNumber": 286,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 80.73033142089844,
+        "seqNumber": 287,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 2 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 80.73100280761719,
+        "seqNumber": 288,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 2 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 81.75100708007812,
+        "seqNumber": 289,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 81.75161743164062,
+        "seqNumber": 290,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 82.75051879882812,
+        "seqNumber": 291,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 82.7510986328125,
+        "seqNumber": 292,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 83.7701416015625,
+        "seqNumber": 293,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 83.77070617675781,
+        "seqNumber": 294,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 84.77021789550781,
+        "seqNumber": 295,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 84.77069091796875,
+        "seqNumber": 296,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 85.79008483886719,
+        "seqNumber": 297,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 85.79072570800781,
+        "seqNumber": 298,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 86.79005432128906,
+        "seqNumber": 299,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 4 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 86.79063415527344,
+        "seqNumber": 300,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 4 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 87.79045104980469,
+        "seqNumber": 301,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 87.79100036621094,
+        "seqNumber": 302,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 88.81007385253906,
+        "seqNumber": 303,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 88.81065368652344,
+        "seqNumber": 304,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 89.81024169921875,
+        "seqNumber": 305,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 89.81072998046875,
+        "seqNumber": 306,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 90.81019592285156,
+        "seqNumber": 307,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick axis 2 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 90.81080627441406,
+        "seqNumber": 308,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick axis 2 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 91.83027648925781,
+        "seqNumber": 309,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 91.83128356933594,
+        "seqNumber": 310,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 92.830078125,
+        "seqNumber": 311,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 4 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 92.83067321777344,
+        "seqNumber": 312,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 4 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 93.83027648925781,
+        "seqNumber": 313,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 4 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 93.83090209960938,
+        "seqNumber": 314,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 4 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 94.83015441894531,
+        "seqNumber": 315,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 94.83082580566406,
+        "seqNumber": 316,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 95.83030700683594,
+        "seqNumber": 317,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick axis 2 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 95.83088684082031,
+        "seqNumber": 318,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick axis 2 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 96.830322265625,
+        "seqNumber": 319,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 96.83088684082031,
+        "seqNumber": 320,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 97.85050964355469,
+        "seqNumber": 321,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 97.85105895996094,
+        "seqNumber": 322,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 98.87016296386719,
+        "seqNumber": 323,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 98.87078857421875,
+        "seqNumber": 324,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 99.89006042480469,
+        "seqNumber": 325,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 99.89059448242188,
+        "seqNumber": 326,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 100.89002990722656,
+        "seqNumber": 327,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 1 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 100.89051818847656,
+        "seqNumber": 328,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 1 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 101.89042663574219,
+        "seqNumber": 329,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 4 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 101.89100646972656,
+        "seqNumber": 330,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 4 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 102.91001892089844,
+        "seqNumber": 331,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 102.91053771972656,
+        "seqNumber": 332,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 103.909912109375,
+        "seqNumber": 333,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 4 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 103.91056823730469,
+        "seqNumber": 334,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 4 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 104.91015625,
+        "seqNumber": 335,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 104.91067504882812,
+        "seqNumber": 336,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 105.91021728515625,
+        "seqNumber": 337,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick axis 2 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 105.91082763671875,
+        "seqNumber": 338,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick axis 2 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 107.91009521484375,
+        "seqNumber": 339,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 4 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 107.91073608398438,
+        "seqNumber": 340,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 4 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 108.93016052246094,
+        "seqNumber": 341,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 108.93080139160156,
+        "seqNumber": 342,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 109.93028259277344,
+        "seqNumber": 343,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick axis 2 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 109.93080139160156,
+        "seqNumber": 344,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick axis 2 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 110.93016052246094,
+        "seqNumber": 345,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 110.93118286132812,
+        "seqNumber": 346,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 111.95014953613281,
+        "seqNumber": 347,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 111.95074462890625,
+        "seqNumber": 348,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 113.96990966796875,
+        "seqNumber": 349,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 113.97056579589844,
+        "seqNumber": 350,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 114.97024536132812,
+        "seqNumber": 351,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 114.97080993652344,
+        "seqNumber": 352,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 115.9898681640625,
+        "seqNumber": 353,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 115.990478515625,
+        "seqNumber": 354,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 116.9912109375,
+        "seqNumber": 355,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 1 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 116.99186706542969,
+        "seqNumber": 356,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 1 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 117.98991394042969,
+        "seqNumber": 357,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick axis 2 on port 1 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 117.99049377441406,
+        "seqNumber": 358,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick axis 2 on port 1 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 119.01046752929688,
+        "seqNumber": 359,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 119.01112365722656,
+        "seqNumber": 360,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 120.03005981445312,
+        "seqNumber": 361,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 120.03070068359375,
+        "seqNumber": 362,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    },
+    {
+        "timestamp": 121.03010559082031,
+        "seqNumber": 363,
+        "numOccur": 1,
+        "errorCode": 1,
+        "flags": 0,
+        "details": "Joystick Button 3 on port 0 not available, check if controller is plugged in",
+        "location": "edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345)",
+        "callStack": "",
+        "messageType": 1
+    },
+    {
+        "messageType": 2,
+        "timestamp": 121.03070068359375,
+        "seqNumber": 364,
+        "line": "Warning at edu.wpi.first.wpilibj.DriverStation.reportJoystickUnpluggedWarning(DriverStation.java:1345): Joystick Button 3 on port 0 not available, check if controller is plugged in"
+    }
+]

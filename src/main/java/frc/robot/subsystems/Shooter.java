@@ -10,6 +10,7 @@ import com.revrobotics.spark.SparkLowLevel.MotorType;
 import com.ctre.phoenix6.configs.CANcoderConfiguration;
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
 import com.ctre.phoenix6.controls.DutyCycleOut;
+import com.ctre.phoenix6.controls.VoltageOut;
 import com.ctre.phoenix6.hardware.CANcoder;
 import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.hardware.core.CoreTalonFX;
@@ -75,10 +76,12 @@ public class Shooter extends SubsystemBase {
     //anglePID = new PIDController(0.0015, 0.001, 0);
   }
 
-
+  double shooterSpeed = 12;
 
   public void useShooter(double shooterSpeed) {
-    shooterMotor.set(shooterSpeed);
+    var voltageRequest = new VoltageOut(0);
+    //shooterMotor.setControl(voltageRequest.withOutput(shooterSpeed));
+    shooterMotor.setVoltage(shooterSpeed);  
   }
 
 // ShooterAim  can be used i think?

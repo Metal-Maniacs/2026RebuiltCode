@@ -21,7 +21,7 @@ import frc.robot.Constants.DriveConstants;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import com.pathplanner.lib.auto.AutoBuilder;
 //import com.pathplanner.lib.commands;
-//import com.pathplanner.lib.auto.AutoBuilder;
+
 import com.pathplanner.lib.config.PIDConstants;
 import com.pathplanner.lib.config.RobotConfig;
 import com.pathplanner.lib.controllers.PPHolonomicDriveController;
@@ -96,21 +96,23 @@ public class DriveSubsystem extends SubsystemBase {
     
     // Load the RobotConfig from the GUI settings. You should probably
     // store this in your Constants file
-    /*RobotConfig config;
+    RobotConfig config;
     try{
       config = RobotConfig.fromGUISettings();
     } catch (Exception e) {
       // Handle exception as needed
       e.printStackTrace();
-    }*/
+    }
 
     
     // Configure AutoBuilder last
-     /*AutoBuilder.configure(
+     AutoBuilder.configure(
             this::getPose, // Robot pose supplier
-            this::resetPose, // Method to reset odometry (will be called if your auto has a starting pose)
-            this::getRobotRelativeSpeeds, // ChassisSpeeds supplier. MUST BE ROBOT RELATIVE
-            (speeds, feedforwards) -> driveRobotRelative(speeds), // Method that will drive the robot given ROBOT RELATIVE ChassisSpeeds. Also optionally outputs individual module feedforwards
+            this::resetOdometry,
+            this::drive,
+            //this::resetPose, // Method to reset odometry (will be called if your auto has a starting pose)
+            //this::getRobotRelativeSpeeds, // ChassisSpeeds supplier. MUST BE ROBOT RELATIVE
+            (speeds, feedforwards) -> toSwerveModuleStates(speeds), // Method that will drive the robot given ROBOT RELATIVE ChassisSpeeds. Also optionally outputs individual module feedforwards
             new PPHolonomicDriveController( // PPHolonomicController is the built in path following controller for holonomic drive trains
                     new PIDConstants(5.0, 0.0, 0.0), // Translation PID constants
                     new PIDConstants(5.0, 0.0, 0.0) // Rotation PID constants
@@ -128,7 +130,7 @@ public class DriveSubsystem extends SubsystemBase {
               return false;
             },
             this // Reference to this subsystem to set requirements
-    );*/
+    );
 
 
   }
@@ -306,4 +308,5 @@ public class DriveSubsystem extends SubsystemBase {
     return m_gyro.getRate(IMUAxis.kZ) * (DriveConstants.kGyroReversed ? -1.0 : 1.0);
   }
 }
+
 

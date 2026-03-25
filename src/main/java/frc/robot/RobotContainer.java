@@ -54,9 +54,9 @@ public class RobotContainer {
   private final Shooter shooterMotor = new Shooter();
  // private final Shooter shooterSusanMotor = new Shooter();
  // private final Shooter shooterArchMotor = new Shooter();
-  private final Hopper HopperExtend = new Hopper();
-  private final Hopper HopperDeExtend = new Hopper();
-  private final Hopper HopperRoller = new Hopper();
+  //private final Hopper HopperExtend = new Hopper();
+  //private final Hopper HopperDeExtend = new Hopper();
+ // private final Hopper HopperRoller = new Hopper();
   private final Climb m_climb = new Climb();
 
  
@@ -144,7 +144,7 @@ public class RobotContainer {
                 -MathUtil.applyDeadband(m_driverController.getLeftX(), OIConstants.kDriveDeadband),
                 -MathUtil.applyDeadband(m_driverController.getRightX(), OIConstants.kDriveDeadband),
                 true,
-                0.5),
+                0.75),
             m_robotDrive)
     );
 
@@ -173,14 +173,14 @@ public class RobotContainer {
 // CLIMB works i think
    m_subsystemController.a().whileTrue(
         new StartEndCommand(
-            () -> m_climb.useClimb(.1), 
+            () -> m_climb.useClimb(.5), 
             () -> m_climb.useClimb(0), 
             m_climb)
     );
-
+  
 m_subsystemController.b().whileTrue(
         new StartEndCommand(
-            () -> m_climb.useClimb(-.1), 
+            () -> m_climb.useClimb(-.5), 
             () -> m_climb.useClimb(0), 
             m_climb)
     ); 
@@ -194,31 +194,31 @@ m_subsystemController.b().whileTrue(
     // chnaged hopper to extend 
      m_subsystemController.rightBumper().whileTrue(
         new StartEndCommand(
-            () -> HopperExtend.extend(.25), 
-            () -> HopperExtend.extend(0), 
-            HopperExtend)
+            () -> m_Hopper.extend(1), 
+            () -> m_Hopper.extend(0), 
+            m_Hopper)
     );
 
 // this helps deextend
  m_subsystemController.leftBumper().whileTrue(   
         new StartEndCommand(
-            () -> HopperDeExtend.deextend(-.25), 
-            () -> HopperDeExtend.deextend(0), 
-            HopperDeExtend)
+            () -> m_Hopper.deextend(-.75), 
+            () -> m_Hopper.deextend(0), 
+            m_Hopper)
     );
 
-    // added roller cotrollers
-     m_subsystemController.y().whileTrue(   
+    
+     m_subsystemController.povUp().whileTrue(   
         new StartEndCommand(
-           () -> m_Hopper.intake(.25), 
+           () -> m_Hopper.intake(-1), 
             () -> m_Hopper.intake(0), 
             m_Hopper)
     );
 
 //wahhh
- m_subsystemController.x().whileTrue(   
+ m_subsystemController.povDown().whileTrue(   
         new StartEndCommand(
-            () -> m_Hopper.intake(-.25), 
+            () -> m_Hopper.intake(1), 
             () -> m_Hopper.intake(0), 
             m_Hopper)
     );
@@ -229,19 +229,19 @@ m_subsystemController.b().whileTrue(
 
 //=========================WORKS AS A SHOOTER I THINK========================
   
-      m_subsystemController.rightTrigger().whileTrue(
+       m_subsystemController.povRight().whileTrue(
         new StartEndCommand(
-            () -> shooterMotor.useShooter(0.1),
+            () -> shooterMotor.useShooter(12),
             () -> shooterMotor.useShooter(0), 
             shooterMotor)
     );
          
-    m_subsystemController.leftTrigger().whileTrue(
+    m_subsystemController.povLeft().whileTrue(
         new StartEndCommand(
-            () -> shooterMotor.useShooter(-0.1), 
+            () -> shooterMotor.useShooter(-12), 
             () -> shooterMotor.useShooter(0),
             shooterMotor)
-    );
+);
 
 
 //----------------------------- took out the shooter code------------------------------------------
