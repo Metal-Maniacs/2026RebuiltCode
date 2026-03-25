@@ -77,6 +77,7 @@ public class Shooter extends SubsystemBase {
   }
 
   double shooterSpeed = 12;
+  // done
 
   public void useShooter(double shooterSpeed) {
     var voltageRequest = new VoltageOut(0);
