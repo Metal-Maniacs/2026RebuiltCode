@@ -19,6 +19,7 @@ import edu.wpi.first.wpilibj.ADIS16470_IMU;
 import edu.wpi.first.wpilibj.ADIS16470_IMU.IMUAxis;
 import frc.robot.Constants.DriveConstants;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import edu.wpi.first.wpilibj.DriverStation;
 import com.pathplanner.lib.auto.AutoBuilder;
 //import com.pathplanner.lib.commands;
 
@@ -96,7 +97,7 @@ public class DriveSubsystem extends SubsystemBase {
     
     // Load the RobotConfig from the GUI settings. You should probably
     // store this in your Constants file
-    RobotConfig config;
+    RobotConfig config = null;
     try{
       config = RobotConfig.fromGUISettings();
     } catch (Exception e) {
@@ -106,13 +107,11 @@ public class DriveSubsystem extends SubsystemBase {
 
     
     // Configure AutoBuilder last
-     AutoBuilder.configure(
+    AutoBuilder.configure(
             this::getPose, // Robot pose supplier
-            this::resetOdometry,
-            this::drive,
-            //this::resetPose, // Method to reset odometry (will be called if your auto has a starting pose)
-            //this::getRobotRelativeSpeeds, // ChassisSpeeds supplier. MUST BE ROBOT RELATIVE
-            (speeds, feedforwards) -> toSwerveModuleStates(speeds), // Method that will drive the robot given ROBOT RELATIVE ChassisSpeeds. Also optionally outputs individual module feedforwards
+            this::resetOdometry, // Method to reset odometry (will be called if your auto has a starting pose)
+            this::getRobotRelativeSpeeds, // ChassisSpeeds supplier. MUST BE ROBOT RELATIVE
+            (speeds, feedforwards) -> driveRobotRelative(speeds), // Method that will drive the robot given ROBOT RELATIVE ChassisSpeeds. Also optionally outputs individual module feedforwards
             new PPHolonomicDriveController( // PPHolonomicController is the built in path following controller for holonomic drive trains
                     new PIDConstants(5.0, 0.0, 0.0), // Translation PID constants
                     new PIDConstants(5.0, 0.0, 0.0) // Rotation PID constants
@@ -147,7 +146,16 @@ public class DriveSubsystem extends SubsystemBase {
             m_rearRight.getPosition()
         });
   }
+  public void driveRobotRelative(ChassisSpeeds speeds){
+    this.drive(speeds.vxMetersPerSecond, speeds.vyMetersPerSecond, speeds.omegaRadiansPerSecond, false, multiplierOfSpeed);
+  }
 
+  public ChassisSpeeds getRobotRelativeSpeeds(){
+    return DriveConstants.kDriveKinematics.toChassisSpeeds(m_frontLeft.getState(),
+                                                            m_frontRight.getState(),
+                                                            m_rearLeft.getState(),
+                                                            m_rearRight.getState());
+  }
   /**
    * Returns the currently-estimated pose of the robot.
    *
