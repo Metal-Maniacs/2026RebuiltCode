@@ -5,6 +5,8 @@
 
 package frc.robot;
 
+import com.pathplanner.lib.commands.PathPlannerAuto;
+
 import edu.wpi.first.math.MathUtil;
 /*import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.controller.ProfiledPIDController;
@@ -301,6 +303,8 @@ m_subsystemController.povDown().whileTrue(
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
+
+     return new PathPlannerAuto("New Auto");
     /*
     // Create config for trajectory
     TrajectoryConfig config = new TrajectoryConfig(
@@ -345,6 +349,6 @@ m_subsystemController.povDown().whileTrue(
     //return new RightAuto(m_robotDrive, 15);
     //return new AutoDriveForward(m_robotDrive, 15);
     //return new MiddleAuto(m_robotDrive, 15);
-    return null;
+   // return null;
   }
 }
