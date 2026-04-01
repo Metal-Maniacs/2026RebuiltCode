@@ -32,16 +32,16 @@
     },
     {
       "anchor": {
-        "x": 2.395480427046264,
-        "y": 3.45938315539739
+        "x": 2.2814743589743607,
+        "y": 4.151282051282052
       },
       "prevControl": {
-        "x": 2.648458464554686,
-        "y": 2.6828800217977973
+        "x": 2.2939256456829287,
+        "y": 3.2547894082652227
       },
       "nextControl": {
-        "x": 2.161274145185732,
-        "y": 4.178267346153904
+        "x": 2.2698461538461547,
+        "y": 4.988512820512821
       },
       "isLocked": false,
       "linkedName": null
@@ -87,8 +87,26 @@
     }
   ],
   "constraintZones": [],
-  "pointTowardsZones": [],
-  "eventMarkers": [],
+  "pointTowardsZones": [
+    {
+      "fieldPosition": {
+        "x": 4.63,
+        "y": 4.02
+      },
+      "rotationOffset": 0.0,
+      "minWaypointRelativePos": 1.4529346622370145,
+      "maxWaypointRelativePos": 2.8438538205980013,
+      "name": "Point Towards Zone"
+    }
+  ],
+  "eventMarkers": [
+    {
+      "name": "Shoot",
+      "waypointRelativePos": 1.4529346622369896,
+      "endWaypointRelativePos": null,
+      "command": null
+    }
+  ],
   "globalConstraints": {
     "maxVelocity": 3.0,
     "maxAcceleration": 3.0,
@@ -102,7 +120,7 @@
     "rotation": 1.5391454221825258
   },
   "reversed": false,
-  "folder": "New Folder",
+  "folder": "Collect n Shoot",
   "idealStartingState": {
     "velocity": 0,
     "rotation": 1.5391454221825258

@@ -5,6 +5,7 @@
 
 package frc.robot;
 
+import com.pathplanner.lib.auto.NamedCommands;
 import com.pathplanner.lib.commands.PathPlannerAuto;
 
 import edu.wpi.first.math.MathUtil;
@@ -17,7 +18,8 @@ import edu.wpi.first.math.trajectory.Trajectory;
 import edu.wpi.first.math.trajectory.TrajectoryConfig;
 import edu.wpi.first.math.trajectory.TrajectoryGenerator;*/
 import edu.wpi.first.wpilibj.XboxController;
-
+import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.subsystems.Hopper;
 //import frc.robot.subsystems.Climb;
 
@@ -37,6 +39,7 @@ import frc.robot.Constants.OIConstants;
 //import frc.robot.commands.LeftAuto;
 import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.commands.AutoDriveForward;
+import frc.robot.commands.ShooterCommand;
 //import frc.robot.commands.MiddleAuto;
 import frc.robot.subsystems.Shooter;
 import frc.robot.subsystems.Climb;
@@ -78,6 +81,10 @@ public class RobotContainer {
    * The container for the robot. Contains subsystems, OI devices, and commands.
    */
   public RobotContainer() {
+
+    // tell pathplanner what our shooter command is
+    NamedCommands.registerCommand("Shoot", new ShooterCommand(shooterMotor, 1));
+
     // Configure the button bindings
     configureButtonBindings();
 
@@ -96,6 +103,15 @@ public class RobotContainer {
                     true,
                     1),
                 m_robotDrive));
+
+        /*
+        SendableChooser<String> autoChooser = new SendableChooser<>();
+        autoChooser.setDefaultOption("Default Auto", "Default");
+        autoChooser.addOption("Option A", "OptionA");
+        autoChooser.addOption("Option B", "OptionB");
+        SmartDashboard.putData("Auto Selector", autoChooser);
+        */
+
     }
 
   /**
@@ -193,7 +209,7 @@ m_subsystemController.b().whileTrue(
     // Might need to be modified
     //changed half power to quarter pwr because testing
 
-    // chnaged hopper to extend 
+    // changed hopper to extend 
      m_subsystemController.rightBumper().whileTrue(
         new StartEndCommand(
             () -> m_Hopper.extend(1), 
@@ -304,7 +320,7 @@ m_subsystemController.povDown().whileTrue(
    */
   public Command getAutonomousCommand() {
 
-     return new PathPlannerAuto("New Auto");
+     return new PathPlannerAuto("Back Up and Shoot");
     /*
     // Create config for trajectory
     TrajectoryConfig config = new TrajectoryConfig(

@@ -3,8 +3,8 @@
   "robotLength": 0.864,
   "holonomicMode": true,
   "pathFolders": [
-    "New Folder",
-    "New New Folder"
+    "Collect n Shoot",
+    "Back Up and Shoot"
   ],
   "autoFolders": [
     "New Folder"
@@ -33,5 +33,7 @@
   "brModuleY": -0.2738978117,
   "bumperOffsetX": 0.0,
   "bumperOffsetY": 0.0,
-  "robotFeatures": []
+  "robotFeatures": [
+    "{\"name\":\"Rectangle\",\"type\":\"rounded_rect\",\"data\":{\"center\":{\"x\":0.0,\"y\":0.0},\"size\":{\"width\":0.2,\"length\":0.2},\"borderRadius\":0.05,\"strokeWidth\":0.02,\"filled\":false}}"
+  ]
 }

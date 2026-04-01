@@ -21,6 +21,12 @@
           "data": {
             "pathName": "Loop"
           }
+        },
+        {
+          "type": "sequential",
+          "data": {
+            "commands": []
+          }
         }
       ]
     }

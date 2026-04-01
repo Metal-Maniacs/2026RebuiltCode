@@ -20,12 +20,12 @@
         "y": 5.525912161824015
       },
       "prevControl": {
-        "x": 3.68404940392059,
-        "y": 5.708929748555679
+        "x": 4.306413518659861,
+        "y": 5.609025542149074
       },
       "nextControl": {
-        "x": 6.420153479070753,
-        "y": 5.269720128656137
+        "x": 6.420153479070752,
+        "y": 5.269720128656143
       },
       "isLocked": true,
       "linkedName": null
@@ -66,7 +66,7 @@
     "rotation": 1.5391454221825258
   },
   "reversed": false,
-  "folder": "New Folder",
+  "folder": "Collect n Shoot",
   "idealStartingState": {
     "velocity": 0,
     "rotation": -25.103098344155505
