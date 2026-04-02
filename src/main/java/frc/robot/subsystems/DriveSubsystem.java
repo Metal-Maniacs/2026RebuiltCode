@@ -78,9 +78,7 @@ public class DriveSubsystem extends SubsystemBase {
           m_rearLeft.getPosition(),
           m_rearRight.getPosition()
       });
-
-  
-
+      
   /** Creates a new DriveSubsystem. */
   public DriveSubsystem() {
     // Usage reporting for MAXSwerve template
@@ -139,9 +137,6 @@ public class DriveSubsystem extends SubsystemBase {
             },
             this // Reference to this subsystem to set requirements
     );
-
-
-
 
   }
 

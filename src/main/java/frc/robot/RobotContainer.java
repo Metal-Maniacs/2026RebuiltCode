@@ -74,7 +74,7 @@ public class RobotContainer {
 
   // Controller Buttons
   Trigger xButton = m_driverController.x();
-
+  
 //
  
   /**
@@ -87,8 +87,6 @@ public class RobotContainer {
 
     // Configure the button bindings
     configureButtonBindings();
-
-  
 
     // Configure default commands
 
@@ -320,7 +318,7 @@ m_subsystemController.povDown().whileTrue(
    */
   public Command getAutonomousCommand() {
 
-     return new PathPlannerAuto("Back Up and Shoot");
+     //return new PathPlannerAuto("Back Up and Shoot");
     /*
     // Create config for trajectory
     TrajectoryConfig config = new TrajectoryConfig(
@@ -363,7 +361,7 @@ m_subsystemController.povDown().whileTrue(
     */
     //return new LeftAuto(m_robotDrive, 15);
     //return new RightAuto(m_robotDrive, 15);
-    //return new AutoDriveForward(m_robotDrive, 15);
+    return new AutoDriveForward(m_robotDrive, 15);
     //return new MiddleAuto(m_robotDrive, 15);
    // return null;
   }
