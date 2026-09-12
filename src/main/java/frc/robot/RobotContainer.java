@@ -96,8 +96,8 @@ public class RobotContainer {
             new RunCommand(
                 () -> m_robotDrive.drive(
                     -MathUtil.applyDeadband(m_driverController.getLeftY(), OIConstants.kDriveDeadband),
-                    -MathUtil.applyDeadband(m_driverController.getLeftX(), OIConstants.kDriveDeadband),
-                    -MathUtil.applyDeadband(m_driverController.getRightX(), OIConstants.kDriveDeadband),
+                    MathUtil.applyDeadband(m_driverController.getLeftX(), OIConstants.kDriveDeadband),
+                    MathUtil.applyDeadband(m_driverController.getRightX(), OIConstants.kDriveDeadband),
                     true,
                     1),
                 m_robotDrive));
@@ -163,6 +163,7 @@ public class RobotContainer {
                 0.75),
             m_robotDrive)
     );
+    /* 
 
     m_driverController.a().whileTrue(
         new RunCommand(
@@ -174,8 +175,8 @@ public class RobotContainer {
                 0.1),
             m_robotDrive)
     );
-
-    m_driverController.rightTrigger().whileTrue(
+*/
+    m_driverController.a ().whileTrue(
         new StartEndCommand(
             () -> m_robotDrive.setX(), 
             () -> m_robotDrive.setX(), 
@@ -187,6 +188,7 @@ public class RobotContainer {
 
 //================================CLIMB===============================
 // CLIMB works i think
+
    m_subsystemController.a().whileTrue(
         new StartEndCommand(
             () -> m_climb.useClimb(.5), 
@@ -210,7 +212,7 @@ m_subsystemController.b().whileTrue(
     // changed hopper to extend 
      m_subsystemController.rightBumper().whileTrue(
         new StartEndCommand(
-            () -> m_Hopper.extend(1), 
+            () -> m_Hopper.extend(0.25), 
             () -> m_Hopper.extend(0), 
             m_Hopper)
     );
@@ -218,7 +220,7 @@ m_subsystemController.b().whileTrue(
 // this helps deextend
  m_subsystemController.leftBumper().whileTrue(   
         new StartEndCommand(
-            () -> m_Hopper.deextend(-.75), 
+            () -> m_Hopper.deextend(-.25), 
             () -> m_Hopper.deextend(0), 
             m_Hopper)
     );
@@ -239,6 +241,7 @@ m_subsystemController.b().whileTrue(
             m_Hopper)
     );
 
+
  
 
  //==========================================================================
@@ -247,18 +250,31 @@ m_subsystemController.b().whileTrue(
   
        m_subsystemController.povRight().whileTrue(
         new StartEndCommand(
-            () -> shooterMotor.useShooter(12),
+            () -> shooterMotor.useShooter(10),
             () -> shooterMotor.useShooter(0), 
             shooterMotor)
+    );
+    // they see me rollin
+      m_subsystemController.x().whileTrue(
+        new StartEndCommand(
+            () -> m_Hopper.rollers(1),
+            () -> m_Hopper.rollers(0), 
+            m_Hopper)
     );
          
     m_subsystemController.povLeft().whileTrue(
         new StartEndCommand(
-            () -> shooterMotor.useShooter(-12), 
+            () -> shooterMotor.useShooter(-10), 
             () -> shooterMotor.useShooter(0),
             shooterMotor)
 );
 
+m_subsystemController.y().whileTrue(
+        new StartEndCommand(
+            () -> m_Hopper.rollers(-1),
+            () -> m_Hopper.rollers(0), 
+            m_Hopper)
+    );
 
 //----------------------------- took out the shooter code------------------------------------------
 //shooter aim 
@@ -293,7 +309,7 @@ m_subsystemController.povDown().whileTrue(
             shooterSusanMotor)  
     );*/
 
-
+//grah
 
 //=============================================================================
 
@@ -301,8 +317,8 @@ m_subsystemController.povDown().whileTrue(
 
   }
 //i wanna cry
-     
- 
+
+
 //magic magic please work
 //i hate this
 //please work
@@ -361,8 +377,8 @@ m_subsystemController.povDown().whileTrue(
     */
     //return new LeftAuto(m_robotDrive, 15);
     //return new RightAuto(m_robotDrive, 15);
-    return new AutoDriveForward(m_robotDrive, 15);
+    //return new AutoDriveForward(m_robotDrive, 15);
     //return new MiddleAuto(m_robotDrive, 15);
-   // return null;
+   return null;
   }
 }

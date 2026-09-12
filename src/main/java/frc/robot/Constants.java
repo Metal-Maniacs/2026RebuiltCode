@@ -73,7 +73,7 @@ public final class Constants {
       // in and outtake
 
     // HOPPER  SPARKMAX CAN ID 
-    //public static final int kRollerHopperCanId = 10;
+    public static final int kRollerHopperCanId = 15;
     public static final int kExtendHopperCanId = 11;
 
     // Shooter

@@ -20,6 +20,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import edu.wpi.first.wpilibj2.command.StartEndCommand;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.RobotContainer;
 
@@ -44,6 +45,8 @@ import com.revrobotics.spark.SparkLowLevel.MotorType;
  */
 @SuppressWarnings("unused")
 public class Robot extends TimedRobot {
+
+
   
  /*
   private static final int deviceID=0;
@@ -80,6 +83,8 @@ public class Robot extends TimedRobot {
 
   /** Called once at the beginning of the robot program. */
   public Robot() {
+
+      CameraServer.startAutomaticCapture();
 
 var Shooter_motor = new CoreTalonFX(12);
 
@@ -263,3 +268,4 @@ var Shooter_motor = new CoreTalonFX(12);
   @Override
   public void testPeriodic() {}
 }
+
