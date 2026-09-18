@@ -217,14 +217,13 @@ m_subsystemController.b().whileTrue(
             m_Hopper)
     );
 
-// this helps deextend
- m_subsystemController.leftBumper().whileTrue(   
+    // this helps deextend
+    m_subsystemController.leftBumper().whileTrue(   
         new StartEndCommand(
-            () -> m_Hopper.deextend(-.25), 
-            () -> m_Hopper.deextend(0), 
+            () -> m_Hopper.extend(-0.25), 
+            () -> m_Hopper.extend(0), 
             m_Hopper)
     );
-
     
      m_subsystemController.povUp().whileTrue(   
         new StartEndCommand(
@@ -233,16 +232,13 @@ m_subsystemController.b().whileTrue(
             m_Hopper)
     );
 
-//wahhh
- m_subsystemController.povDown().whileTrue(   
+    //wahhh
+    m_subsystemController.povDown().whileTrue(   
         new StartEndCommand(
             () -> m_Hopper.intake(1), 
             () -> m_Hopper.intake(0), 
             m_Hopper)
     );
-
-
- 
 
  //==========================================================================
 
@@ -267,9 +263,9 @@ m_subsystemController.b().whileTrue(
             () -> shooterMotor.useShooter(-10), 
             () -> shooterMotor.useShooter(0),
             shooterMotor)
-);
+    );
 
-m_subsystemController.y().whileTrue(
+    m_subsystemController.y().whileTrue(
         new StartEndCommand(
             () -> m_Hopper.rollers(-1),
             () -> m_Hopper.rollers(0), 

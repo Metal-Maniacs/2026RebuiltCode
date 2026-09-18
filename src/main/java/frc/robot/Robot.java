@@ -84,16 +84,16 @@ public class Robot extends TimedRobot {
   /** Called once at the beginning of the robot program. */
   public Robot() {
 
-      CameraServer.startAutomaticCapture();
+    CameraServer.startAutomaticCapture();
 
-var Shooter_motor = new CoreTalonFX(12);
+    var Shooter_motor = new CoreTalonFX(12);
 
-  // talonfx  
-  var currentConfigs = new MotorOutputConfigs();
+    // talonfx  
+    var currentConfigs = new MotorOutputConfigs();
 
-   // The left motor is CCW+
-   currentConfigs.Inverted = InvertedValue.CounterClockwise_Positive;
-  Shooter_motor.getConfigurator().apply(currentConfigs);
+    // The left motor is CCW+
+    currentConfigs.Inverted = InvertedValue.CounterClockwise_Positive;
+    Shooter_motor.getConfigurator().apply(currentConfigs);
 
   //4gtghbdgbgt66t66666tbv6
  //private RelativeEncoder m_encoder; 
@@ -110,95 +110,73 @@ var Shooter_motor = new CoreTalonFX(12);
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
    */
-  @Override
-  public void robotInit() {
-    /*
-    // initialize SPARK MAX with CAN ID
-    m_motor = new SparkMax(deviceID, MotorType.kBrushed);
-    m_encoder = m_motor.getEncoder(SparkRelativeEncoder.Type.kQuadrature, 4096);
-    
-    m_motor.restoreFactoryDefaults();*/
+    @Override
+    public void robotInit() {
+      // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
+      // autonomous chooser on the dashboard.
+      m_robotContainer = new RobotContainer();
+    }
 
     /**
-     * In order to use PID functionality for a controller, a SparkPIDController object
-     * is constructed by calling the getPIDController() method on an existing
-     * CANSparkMax object
+     * This function is called every 20 ms, no matter the mode. Use this for items like diagnostics
+     * that you want ran during disabled, autonomous, teleoperated and test.
+     *
+     * <p>This runs after the mode specific periodic functions, but before LiveWindow and
+     * SmartDashboard integrated updating.
      */
-   // m_ClosedLoopController = m_motor.getClosedLoopController();
-
-    //ogcode
-    // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
-    // autonomous chooser on the dashboard.
-    m_robotContainer = new RobotContainer();
-    
-   // elevatorStopTop = new DigitalInput(1);
-    //elevatorStopBottom = new DigitalInput(0);
-
-    //topLimitPressed = false;
-    //bottomLimitPressed = false;
-
-  }
-
-  /**
-   * This function is called every 20 ms, no matter the mode. Use this for items like diagnostics
-   * that you want ran during disabled, autonomous, teleoperated and test.
-   *
-   * <p>This runs after the mode specific periodic functions, but before LiveWindow and
-   * SmartDashboard integrated updating.
-   */
-  @Override
-  public void robotPeriodic() {
-    // Runs the Scheduler.  This is responsible for polling buttons, adding newly-scheduled
-    // commands, running already-scheduled commands, removing finished or interrupted commands,
-    // and running subsystem periodic() methods.  This must be called from the robot's periodic
-    // block in order for anything in the Command-based framework to work.
-    CommandScheduler.getInstance().run();
-  }
-
-  /** This function is called once each time the robot enters Disabled mode. */
-  @Override
-  public void disabledInit() {}
-
-  @Override
-  public void disabledPeriodic() {}
-
-  /** This autonomous runs the autonomous command selected by your {@link RobotContainer} class. */
-  @Override
-  public void autonomousInit() {
-    m_autonomousCommand = m_robotContainer.getAutonomousCommand();
-
-    /*
-     * String autoSelected = SmartDashboard.getString("Auto Selector",
-     * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
-     * = new MyAutoCommand(); break; case "Default Auto": default:
-     * autonomousCommand = new ExampleCommand(); break; }
-     */
-
-    // schedule the autonomous command (example)
-    if (m_autonomousCommand != null) {
-      m_autonomousCommand.schedule();
+    @Override
+    public void robotPeriodic() {
+      // Runs the Scheduler.  This is responsible for polling buttons, adding newly-scheduled
+      // commands, running already-scheduled commands, removing finished or interrupted commands,
+      // and running subsystem periodic() methods.  This must be called from the robot's periodic
+      // block in order for anything in the Command-based framework to work.
+      CommandScheduler.getInstance().run();
     }
-  }
 
-  /** This function is called periodically during autonomous. */
-  @Override
-  public void autonomousPeriodic() {}
+    /** This function is called once each time the robot enters Disabled mode. */
+    @Override
+    public void disabledInit() {}
 
-  @Override
-  public void teleopInit() {
-    // This makes sure that the autonomous stops running when
-    // teleop starts running. If you want the autonomous to
-    // continue until interrupted by another command, remove
-    // this line or comment it out.
-    if (m_autonomousCommand != null) {
-      m_autonomousCommand.cancel();
+    @Override
+    public void disabledPeriodic() {}
+
+    /** This autonomous runs the autonomous command selected by your {@link RobotContainer} class. */
+    @Override
+    public void autonomousInit() {
+      m_autonomousCommand = m_robotContainer.getAutonomousCommand();
+
+      /*
+      * String autoSelected = SmartDashboard.getString("Auto Selector",
+      * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
+      * = new MyAutoCommand(); break; case "Default Auto": default:
+      * autonomousCommand = new ExampleCommand(); break; }
+      */
+
+      // schedule the autonomous command (example)
+      if (m_autonomousCommand != null) {
+        m_autonomousCommand.schedule();
+      }
     }
-    
-  }
 
-  /** This function is called periodically during operator control. */
-  @Override
-  public void teleopPeriodic() {
+    /** This function is called periodically during autonomous. */
+    @Override
+    public void autonomousPeriodic() {}
+
+    @Override
+    public void teleopInit() {
+      // This makes sure that the autonomous stops running when
+      // teleop starts running. If you want the autonomous to
+      // continue until interrupted by another command, remove
+      // this line or comment it out.
+      if (m_autonomousCommand != null) {
+        m_autonomousCommand.cancel();
+      }
+      
+    }
+
+    /** This function is called periodically during operator control. */
+    @Override
+    public void teleopPeriodic() {
   
  // System.out.println("Bottom Speed: " + m_robotContainer.elevateSpeedBottom);
   //System.out.println("Top speed: " + m_robotContainer.elevateSpeedTop);

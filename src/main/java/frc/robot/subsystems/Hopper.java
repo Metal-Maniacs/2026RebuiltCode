@@ -7,7 +7,9 @@ package frc.robot.subsystems;
 import com.revrobotics.spark.SparkMax;
 import com.revrobotics.spark.SparkMax;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
+import com.revrobotics.AbsoluteEncoder;
 
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
@@ -20,10 +22,12 @@ public class Hopper extends SubsystemBase {
   private final SparkMax m_HopperMotor;
   private final SparkMax m_HopperExtendMotor;
   private final SparkMax m_HopperRollers;
-
+  private final AbsoluteEncoder m_HopperEncoder;
+  
 // all the id are added
   public Hopper() {
     m_HopperMotor = new SparkMax(DriveConstants.kHopperCanId, MotorType.kBrushless);
+    m_HopperEncoder = m_HopperMotor.getAbsoluteEncoder();
     m_HopperExtendMotor = new SparkMax(DriveConstants.kExtendHopperCanId, MotorType.kBrushless);
     // no more rollers
     m_HopperRollers = new SparkMax(DriveConstants.kRollerHopperCanId, MotorType.kBrushless);
@@ -35,20 +39,16 @@ public class Hopper extends SubsystemBase {
     m_HopperRollers.set(rollerspeed);
   }
  
-//for intake
-public void intake(double hopperspeed){
-  m_HopperMotor.set(hopperspeed);
-}
+  //for intake
+  public void intake(double hopperspeed){
+    m_HopperMotor.set(hopperspeed);
+  }
 
-// extend and deextend for the correct can id
-    public void extend(double extendSpeed) {
+  // extend and deextend for the correct can id
+  public void extend(double extendSpeed) {
     m_HopperExtendMotor.set(extendSpeed);
   }
-
-    public void deextend(double deextendSpeed) {
-    m_HopperExtendMotor.set(deextendSpeed);
-  }
-
+  
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
