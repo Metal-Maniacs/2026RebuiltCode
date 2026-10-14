@@ -226,14 +226,14 @@ public class DriveSubsystem extends SubsystemBase {
    * Sets the wheels into an X formation to prevent movement.
    */
   public void setX() {
-     m_frontLeft.setDesiredState(new SwerveModuleState(0, Rotation2d.fromDegrees(-45)));
+    m_frontLeft.setDesiredState(new SwerveModuleState(0, Rotation2d.fromDegrees(-45)));
     m_frontRight.setDesiredState(new SwerveModuleState(0, Rotation2d.fromDegrees(45)));
     m_rearLeft.setDesiredState(new SwerveModuleState(0, Rotation2d.fromDegrees(45)));
     m_rearRight.setDesiredState(new SwerveModuleState(0, Rotation2d.fromDegrees(-45)));
   }
 
   public void setForward() {
-     m_frontLeft.setDesiredState(new SwerveModuleState(0, Rotation2d.fromDegrees(0)));
+    m_frontLeft.setDesiredState(new SwerveModuleState(0, Rotation2d.fromDegrees(0)));
     m_frontRight.setDesiredState(new SwerveModuleState(0, Rotation2d.fromDegrees(0)));
     m_rearLeft.setDesiredState(new SwerveModuleState(0, Rotation2d.fromDegrees(0)));
     m_rearRight.setDesiredState(new SwerveModuleState(0, Rotation2d.fromDegrees(0)));
@@ -265,7 +265,6 @@ public class DriveSubsystem extends SubsystemBase {
   public ChassisSpeeds wheeliecool(double x, double y, double rot){
     return new ChassisSpeeds(x, y, rot);
   }
-
  
   public void setInit() {
 
@@ -282,8 +281,8 @@ public class DriveSubsystem extends SubsystemBase {
    * @param desiredStates The desired SwerveModule states.
    */
   public void setModuleStates(SwerveModuleState[] desiredStates) {
-     SwerveDriveKinematics.desaturateWheelSpeeds(
-        desiredStates, DriveConstants.kMaxSpeedMetersPerSecond);
+    SwerveDriveKinematics.desaturateWheelSpeeds(
+      desiredStates, DriveConstants.kMaxSpeedMetersPerSecond);
     m_frontLeft.setDesiredState(desiredStates[0]);
     m_frontRight.setDesiredState(desiredStates[1]);
     m_rearLeft.setDesiredState(desiredStates[2]);
@@ -292,7 +291,7 @@ public class DriveSubsystem extends SubsystemBase {
 
   /** Resets the drive encoders to currently read a position of 0. */
   public void resetEncoders() {
-     m_frontLeft.resetEncoders();
+    m_frontLeft.resetEncoders();
     m_rearLeft.resetEncoders();
     m_frontRight.resetEncoders();
     m_rearRight.resetEncoders();
@@ -322,5 +321,3 @@ public class DriveSubsystem extends SubsystemBase {
     return m_gyro.getRate(IMUAxis.kZ) * (DriveConstants.kGyroReversed ? -1.0 : 1.0);
   }
 }
-
-

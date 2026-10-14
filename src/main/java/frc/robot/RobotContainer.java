@@ -314,15 +314,6 @@ m_subsystemController.povDown().whileTrue(
   }
 //i wanna cry
 
-
-//magic magic please work
-//i hate this
-//please work
-//move signal light
-
- 
-  //}
-
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
    *
@@ -371,6 +362,9 @@ m_subsystemController.povDown().whileTrue(
     // Run path following command, then stop at the end.
     return swerveControllerCommand.andThen(() -> m_robotDrive.drive(0, 0, 0, false));
     */
+
+    // Below, are the lines that trigger the auto we want. They're all off because we have no autos
+
     //return new LeftAuto(m_robotDrive, 15);
     //return new RightAuto(m_robotDrive, 15);
     //return new AutoDriveForward(m_robotDrive, 15);
