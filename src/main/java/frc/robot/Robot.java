@@ -66,7 +66,6 @@ public class Robot extends TimedRobot {
 
   CommandXboxController controller;
   UsbCamera driveCam;
-  UsbCamera clawCam;
   
   VideoSink server;
 

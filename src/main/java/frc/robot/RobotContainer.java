@@ -62,7 +62,7 @@ public class RobotContainer {
   //private final Hopper HopperExtend = new Hopper();
   //private final Hopper HopperDeExtend = new Hopper();
  // private final Hopper HopperRoller = new Hopper();
-  private final Climb m_climb = new Climb();
+  //private final Climb m_climb = new Climb();
 
  
   private double climbmult = 1;
@@ -189,7 +189,7 @@ public class RobotContainer {
 //================================CLIMB===============================
 // CLIMB works i think
 
-   m_subsystemController.a().whileTrue(
+  /* m_subsystemController.a().whileTrue(
         new StartEndCommand(
             () -> m_climb.useClimb(.5), 
             () -> m_climb.useClimb(0), 
@@ -201,7 +201,7 @@ m_subsystemController.b().whileTrue(
             () -> m_climb.useClimb(-.5), 
             () -> m_climb.useClimb(0), 
             m_climb)
-    ); 
+    ); */
 //============================================================================
     
 //=======================================HOPPER===============================

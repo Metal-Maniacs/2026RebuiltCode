@@ -216,6 +216,12 @@ public class DriveSubsystem extends SubsystemBase {
     m_frontRight.setDesiredState(swerveModuleStates[1]);
     m_rearLeft.setDesiredState(swerveModuleStates[2]);
     m_rearRight.setDesiredState(swerveModuleStates[3]);
+
+    System.out.printf("ID5: %.1f | ID6: %.1f | ID7: %.1f | ID8: %.1f \n",
+                      m_rearRight.m_drivingSpark.getOutputCurrent(),
+                      m_rearLeft.m_drivingSpark.getOutputCurrent(),
+                      m_frontLeft.m_drivingSpark.getOutputCurrent(),
+                      m_frontRight.m_drivingSpark.getOutputCurrent());
   }
 
   public void setMult(double num) {
